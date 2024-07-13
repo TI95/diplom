@@ -1,0 +1,91 @@
+@import "../../../../assets/styles/variables";
+
+.header {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+
+  .container.login {
+    width: 1440px;
+    padding: 0;
+
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+
+
+    .header-logo {
+      padding: 40px 0;
+      margin-right: 100px;
+      margin-left: 100px;
+    }
+
+    .header-menu {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+
+      nav ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+        li {
+          margin-right: 30px;
+          list-style: none;
+
+          a {
+            text-decoration: none;
+            cursor: pointer;
+            color: #071739;
+          }
+
+          &:last-child {
+            margin-right: 257px;
+          }
+        }
+      }
+
+      .header-phone {
+        margin-right: 89px;
+
+        a {
+          color: $light-blue-color;
+          text-decoration: none;
+        }
+      }
+
+      .header-profile-action {
+        display: flex;
+        align-items: center;
+
+        .header-profile-action-img {
+          margin-left: 52px;
+
+        }
+
+        a {
+          margin-left: 8px;
+          color: #071739;
+          text-decoration: none;
+        }
+
+
+      }
+
+      .header-profile-action-is-logged {
+        display: flex;
+        align-items: center;
+
+        a {
+          margin-left: 8px;
+          color: #071739;
+          text-decoration: none;
+          cursor: pointer;
+
+        }
+      }
+    }
+  }
+}

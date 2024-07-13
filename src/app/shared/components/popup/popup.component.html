@@ -1,0 +1,39 @@
+<ng-template #popup>
+  <div class="modal" (click)="closePopup()">
+    <div class="modal-body " (click)="$event.stopPropagation()">
+      <div class="modal-body-order" *ngIf="!showOrderCompletedText">
+        <div class="modal-title">Заявка на услугу</div>
+        <form [formGroup]="popupForm"  class="modal-inputs">
+          <select class="modal-input" *ngIf="!footerPopup" formControlName="service">
+
+            <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+          </select>
+          <input type="text" class="modal-input"
+                 [ngStyle]="{'border-color': popupForm.get('name')?.invalid
+                 && (popupForm.get('name')?.dirty || popupForm.get('name')?.touched)? 'red' : ''}"
+                 formControlName="name" placeholder="Ваше имя">
+
+          <input type="text" class="modal-input"
+                 [ngStyle]="{'border-color': popupForm.get('phone')?.invalid
+                 && (popupForm.get('phone')?.dirty || popupForm.get('phone')?.touched)? 'red' : ''}"
+                 formControlName="phone" placeholder="Ваш номер телефона">
+        </form>
+        <div class="modal-action">
+          <button class="btn" *ngIf=" !footerPopup" (click)="completeOrder('order')" >Оставить заявку</button>
+          <button class="btn" *ngIf=" footerPopup" (click)="completeOrder('consultation')" >Оставить заявку</button>
+
+          <div class="order-error" *ngIf="orderCompleteResponseError">Произошла ошибка при отправке формы, попробуйте еще раз</div>
+        </div>
+      </div>
+      <div class="modal-body-order-competed" *ngIf="showOrderCompletedText">
+        <div class="modal-title-order-competed">
+          Спасибо за вашу заявку!
+        </div>
+        <div class="modal-text-order-competed">Мы свяжемся с вами при первой же возможности.</div>
+        <div class="modal-action-order-competed">
+          <button class="btn" (click)="closePopup()" >Окей</button>
+        </div>
+      </div >
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,385 @@
+<section class="banner">
+  <owl-carousel-o [options]="OwlOptions" #owlCar>
+    <ng-template carouselSlide>
+      <div class="container">
+        <a class="move-back" (click)="owlCar.prev()"><img src="../../../assets/images/pages/arrow-prev.png"
+                                                          alt="arrow-prev"></a>
+        <div class="carousel-background">
+          <div class="carousel-title">
+            Предложение месяца
+          </div>
+          <div class="carousel-text">
+            Продвижение в Instagram для вашего бизнеса <span>-15%</span>!
+          </div>
+          <div class="carousel-button">
+            <button class="btn" mat-button (click)="openModal('Реклама')">Подробнее</button>
+          </div>
+        </div>
+        <div class="banner-image">
+          <img src="../../../assets/images/banner/banner-img-1.png" alt="banner-img-1">
+        </div>
+        <a class="move-forward" (click)="owlCar.next()"><img src="../../../assets/images/pages/arrow-next.png"
+                                                             alt="arrow-next"></a>
+      </div>
+    </ng-template>
+
+    <ng-template carouselSlide>
+      <div class="container">
+        <a class="move-back" (click)="owlCar.prev()"><img src="../../../assets/images/pages/arrow-prev.png"
+                                                          alt="arrow-prev"></a>
+        <div class="carousel-background">
+          <div class="carousel-title">
+            Акция
+          </div>
+          <div class="carousel-text v2">
+            Нужен грамотный <span>копирайтер</span>?
+          </div>
+          <div class="carousel-description">
+            Весь декабрь у нас действует акция на работу копирайтера.
+          </div>
+          <div class="carousel-button-2">
+            <button class="btn" mat-button (click)="openModal('Копирайтинг')">Подробнее</button>
+          </div>
+        </div>
+        <div class="banner-image">
+        </div>
+        <img src="../../../assets/images/banner/banner-img-2.png" alt="banner-img-3">
+        <a class="move-forward" (click)="owlCar.next()"><img src="../../../assets/images/pages/arrow-next.png"
+                                                             alt="arrow-next"></a>
+      </div>
+    </ng-template>
+
+    <ng-template carouselSlide>
+      <div class="container">
+        <a class="move-back" (click)="owlCar.prev()"><img src="../../../assets/images/pages/arrow-prev.png"
+                                                          alt="arrow-prev"></a>
+        <div class="carousel-background">
+          <div class="carousel-title">
+            Предложение месяца
+          </div>
+          <div class="carousel-text carousel-text-v2">
+            <span>6 место </span>в ТОП-10
+            <br>
+            SMM-агенств Москвы!
+          </div>
+          <div class="carousel-description">
+            Мы благодарим каждого, кто голосовал за нас!
+          </div>
+          <div class="carousel-button-2">
+            <button class="btn" mat-button (click)="openModal('Продвижение')">Подробнее</button>
+          </div>
+        </div>
+        <div class="banner-image">
+          <img src="../../../assets/images/banner/banner-img-3.png" alt="banner-img-3">
+        </div>
+        <a class="move-forward" (click)="owlCar.next()"><img src="../../../assets/images/pages/arrow-next.png"
+                                                             alt="arrow-next"></a>
+      </div>
+    </ng-template>
+  </owl-carousel-o>
+</section>
+
+<section class="services">
+  <div class="container">
+    <div class="services-title">
+      Услуги, которые мы предлагаем
+    </div>
+    <div class="services-items">
+      <div class="services-item">
+        <div class="services-item-image">
+          <img src="../../../assets/images/services/service-1.png" alt="service-1">
+        </div>
+        <div class="services-item-title">
+          Создание сайтов
+        </div>
+        <div class="services-item-description">
+          В краткие сроки мы создадим качественный и самое главное продающий сайт для продвижения Вашего бизнеса!
+        </div>
+        <div class="services-item-info">
+          <div class="services-item-price">
+            От 7 500₽
+          </div>
+          <div class="services-item-button">
+            <button class="btn" (click)="openModal('Фриланс')">Подробнее</button>
+          </div>
+        </div>
+      </div>
+      <div class="services-item">
+        <div class="services-item-image">
+          <img src="../../../assets/images/services/service-2.png" alt="service-2">
+        </div>
+        <div class="services-item-title">
+          Продвижение
+        </div>
+        <div class="services-item-description">
+          Вам нужен качественный SMM-специалист или грамотный таргетолог? Мы готовы оказать Вам услугу “Продвижения” на
+          наивысшем уровне!
+        </div>
+        <div class="services-item-info">
+          <div class="services-item-price">
+            От 3 500₽
+          </div>
+          <div class="services-item-button">
+            <button class="btn" (click)="openModal('Продвижение')">Подробнее</button>
+          </div>
+        </div>
+      </div>
+      <div class="services-item">
+        <div class="services-item-image">
+          <img src="../../../assets/images/services/service-3.png" alt="service-3">
+        </div>
+        <div class="services-item-title">
+          Создание сайтов
+        </div>
+        <div class="services-item-description">
+          Без рекламы не может обойтись ни один бизнес или специалист. Обращаясь к нам, мы гарантируем быстрый прирост
+          клиентов за счёт правильно настроенной рекламы.
+        </div>
+        <div class="services-item-info">
+          <div class="services-item-price">
+            От 1000₽
+          </div>
+          <div class="services-item-button">
+            <button class="btn" (click)="openModal('Реклама')">Подробнее</button>
+          </div>
+        </div>
+      </div>
+      <div class="services-item">
+        <div class="services-item-image">
+          <img src="../../../assets/images/services/service-4.png" alt="service-4">
+        </div>
+        <div class="services-item-title">
+          Копирайтинг
+        </div>
+        <div class="services-item-description">
+          Наши копирайтеры готовы написать Вам любые продающие текста, которые не только обеспечат рост охватов, но и
+          помогут выйти на новый уровень в продажах.
+        </div>
+        <div class="services-item-info">
+          <div class="services-item-price">
+            От 750₽
+          </div>
+          <div class="services-item-button">
+            <button class="btn" (click)="openModal('Копирайтинг')">Подробнее</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-us">
+  <div class="container">
+    <div class="about-us-img">
+      <img src="../../../assets/images/pages/about-us-img.png" alt="about-us-img">
+    </div>
+    <div class="about-us-info">
+      <div class="about-us-title">
+        Кто мы и чем мы занимаемся?
+      </div>
+      <div class="about-us-description"> АйтиШторм
+        <span> — это ваш помощник №1 при решении таких вопросов, как продвижение в сети, разработка сайтов для
+        бизнеса и личного бренда, сторисмейкинг, копирайтинг, маркетинг, разработка визуальной концепции и создание
+        инфопродуктов. Компания была основана в 2019 году и за всё это время смогла выйти в ТОП-10 агенств, предлагающих
+        услуги продвижения в сети.</span>
+      </div>
+      <div class="about-us-advantages-title">
+        Наши преимущества
+      </div>
+      <div class="about-us-advantages">
+        <div class="about-us-advantage">
+          <div class="about-us-advantage-number-background">
+            <div class="about-us-advantage-number">
+              1
+            </div>
+          </div>
+          <div class="about-us-advantage-description">
+            Мастерски вовлекаем аудиториюв процесс. <span> Мы увеличиваем процент вовлечённости за короткий промежуток времени.</span>
+          </div>
+        </div>
+        <div class="about-us-advantage">
+          <div class="about-us-advantage-number-background">
+            <div class="about-us-advantage-number">
+              2
+            </div>
+          </div>
+          <div class="about-us-advantage-description">
+            Разрабатываем бомбическую визуальную концепцию. <span> Наши специалисты знают как создать уникальный образ вашего проекта.</span>
+
+          </div>
+        </div>
+        <div class="about-us-advantage">
+          <div class="about-us-advantage-number-background">
+            <div class="about-us-advantage-number">
+              3
+            </div>
+          </div>
+          <div class="about-us-advantage-description">
+            Создаём мощные воронки с помощью текстов.<span>  Наши копирайтеры создают не только вкусные текста, но и классные воронки.</span>
+
+          </div>
+        </div>
+        <div class="about-us-advantage">
+          <div class="about-us-advantage-number-background">
+            <div class="about-us-advantage-number">
+              4
+            </div>
+          </div>
+          <div class="about-us-advantage-description">
+            Помогаем продавать больше.<span> Мы не только помогаем разработать стратегию по продажам, но также корректируем её
+            под нужды заказчика.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="articles">
+  <div class="container">
+    <div class="articles-title">
+      Популярные статьи из блога
+    </div>
+    <div class="articles-items">
+      <div class="articles-item" *ngFor=" let bestArticle of bestArticles">
+        <div class="articles-item-image" style="background-image: url({{serverStaticPath + bestArticle.image}})">
+
+          <div class="article-item-category">{{bestArticle.category}}</div>
+        </div>
+        <div class="articles-item-title">
+          {{bestArticle.title}}      </div>
+        <div class="articles-item-description">
+          {{bestArticle.description}}
+
+        </div>
+        <div class="articles-item-link">
+          <a>Читать дальше</a>
+        </div>
+      </div>
+    </div>
+    <div class="articles-items-blog-link">
+      <a href="">Перейти в блог</a>
+      <img class="link-arrow" src="../../../assets/images/pages/link-arrow.png" alt="link-arrow">
+    </div>
+  </div>
+</section>
+
+
+<section class="reviews">
+  <div class="container">
+    <img class="blue-arrow-prev " (click)="owlCarReviews.prev()" src="../../../assets/images/pages/blue-arrow-prev.png"
+         alt="blue-arrow">
+    <img class="blue-arrow-next" (click)="owlCarReviews.next()" src="../../../assets/images/pages/bue-arrow-next.png"
+         alt="blue-arrow">
+    <div class="reviews-title">
+      Отзывы о нашей работе
+    </div>
+    <owl-carousel-o [options]="reviewsCustomOptions" #owlCarReviews>
+
+      <ng-template carouselSlide>
+        <div class="reviews-item">
+          <div class="review-item-top">
+            <div class="review-item-img-1">
+            </div>
+            <div class="review-item-name">
+              Станислав
+            </div>
+          </div>
+
+          <div class="review-item-text">
+            Спасибо огромное АйтиШторму за прекрасный блог с полезными статьями! Именно они и побудили меня
+            углубиться в тему SMM и начать свою карьеру.
+          </div>
+
+        </div>
+      </ng-template>
+
+      <ng-template carouselSlide>
+        <div class="reviews-item">
+          <div class="review-item-top">
+            <div class="review-item-img-2"></div>
+            <div class="review-item-name">
+              Мария
+            </div>
+          </div>
+
+          <div class="review-item-text">
+
+            Обратилась в АйтиШторм за помощью копирайтера. Ни разу ещё не пожалела! Ребята действительно
+            вкладывают душу в то, что делают, и каждый текст, который я получаю, с нетерпением хочется выложить в
+            сеть.
+          </div>
+
+        </div>
+      </ng-template>
+
+      <ng-template carouselSlide>
+        <div class="reviews-item">
+          <div class="review-item-top">
+            <div class="review-item-img-3">
+            </div>
+            <div class="review-item-name">
+              Алёна
+            </div>
+          </div>
+
+          <div class="review-item-text">
+            Команда АйтиШторма за такой короткий промежуток времени сделала невозможное: от простой фирмы по
+            услуге продвижения выросла в мощный блог о важности личного бренда. Класс!
+
+          </div>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</section>
+
+
+<section class="contacts">
+  <div class="container">
+    <div class="map">
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A280cd8b651ad1bb95bf4430be8a0ca19810611bc2861178224db9252f53022ca&amp;source=constructor"
+        width="607" height="438" frameborder="0"></iframe>
+
+    </div>
+    <div class="contact">
+      <div class="contact-title">
+        Контакты
+      </div>
+      <div class="contact-address-title">
+        Адрес
+      </div>
+      <div class="contact-address">
+        Главный офис компании АйтиШторм находится по адресу Пресненская наб., 12, Москва, Россия, 123317.
+      </div>
+      <div class="contact-phone-title">
+        Телефон
+      </div>
+      <div class="contact-phone">
+        <a href="tel: +74993431334"> +7 (499) 343-13-34</a>
+      </div>
+      <div class="contact-email-title">
+        Электронный адрес
+      </div>
+      <div class="contact-email">
+        <a href="mailto:info@itstorm.com">info@itstorm.com</a>
+      </div>
+      <div class="contact-socials-title">
+        Мы в социальных сетях
+      </div>
+      <div class="contact-socials">
+        <a href="" class="contact-socials-link"><img src="../../../assets/images/icons/vk-blue.png" alt="vk-blue"></a>
+        <a href="" class="contact-socials-link"><img src="../../../assets/images/icons/facebook-blue.png"
+                                                     alt="facebook-blue"></a>
+        <a href="" class="contact-socials-link"><img src="../../../assets/images/icons/intagram-blue.png"
+                                                     alt="intagram-blue"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<app-popup></app-popup>
+
+
