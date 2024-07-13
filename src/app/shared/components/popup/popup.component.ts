@@ -41,6 +41,7 @@ export class PopupComponent implements OnInit {
       this.popupForm.get('service')?.setValue(value);
       this.dialogRef.backdropClick().subscribe(() => {
         this.closePopup();
+        this.popupForm.reset();
       });
     });
   }
@@ -52,8 +53,8 @@ export class PopupComponent implements OnInit {
       this.popupForm.markAllAsTouched();
       return;
     }
-    if (this.popupForm.valid && this.popupForm.value.name && this.popupForm.value.phone && this.popupForm.value.service ) {
-      this.requestService.makeOrder(this.popupForm.value.name, this.popupForm.value.phone, type, this.popupForm.value.service)
+    if (this.popupForm.valid && this.popupForm.value.name && this.popupForm.value.phone ) {
+      this.requestService.makeOrder(this.popupForm.value.name, this.popupForm.value.phone, type, this.popupForm.value.service!)
         .subscribe({
             next: (response: DefaultResponseType) => {
               if (!response.error) {
@@ -72,9 +73,9 @@ export class PopupComponent implements OnInit {
   }
 
   closePopup() {
-    this.dialogRef!.close()
+    this.dialogRef!.close();
     this.showOrderCompletedText = false;
-    this.popupForm.reset();
+
     this.popupForm.markAsPristine();
     this.footerPopup = false;
 
