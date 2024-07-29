@@ -1,0 +1,64 @@
+
+.articles-item {
+  position: relative;
+  width: 292px;
+  height: 571px;
+
+  .articles-item-image {
+    margin-bottom: 15px;
+    position: relative;
+    height: 291px;
+    width: 291px;
+    background-size: cover;
+    background-position: center;
+
+    img {
+
+    }
+
+    .article-item-category {
+      position: absolute;
+      padding: 10px 18px;
+      color: $light-blue-color;
+      background-color: #FFFFFF;
+      border-radius: 5px;
+      top: 10px;
+      right: 9px;
+    }
+  }
+
+  .articles-item-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    margin-bottom: 20px;
+    color: $light-blue-color;
+  }
+
+
+  .articles-item-description {
+    font-family: 'Montserrat', sans-serif;
+    width: 287px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #071739;
+
+
+
+  }
+
+  .articles-item-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    color: $light-blue-color;
+    text-decoration: underline;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+}
+
+

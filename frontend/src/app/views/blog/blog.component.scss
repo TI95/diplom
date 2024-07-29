@@ -1,0 +1,188 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/articles";
+
+
+.blog {
+  .container {
+
+    .blog-title {
+      padding-top: 80px;
+      color: $light-blue-color;
+      font-family: 'Lora', sans-serif;
+      font-size: 38px;
+      font-weight: 400;
+      margin-bottom: 40px;
+    }
+
+    .filters {
+      display: flex;
+      justify-content: space-between;
+
+
+      .filter-selected {
+        display: flex;
+
+        .filter-selected-title {
+          border: 2px solid $light-blue-color;
+          padding: 8px 20px;
+          border-radius: 5px;
+          box-sizing: border-box;
+          margin-right: 10px;
+          display: flex;
+          align-items: center;
+
+          span {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: $light-blue-color;
+            margin-right: 8px;
+          }
+        }
+
+        a {
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 16px;
+            height: 16px;
+
+          }
+        }
+      }
+
+      .filter-select {
+        position: relative;
+        width: 148px;
+        cursor: pointer;
+
+        .filter-select-head {
+          display: flex;
+          justify-content: space-between;
+          box-sizing: border-box;
+          align-items: center;
+
+          .filter-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            margin-right: 8px;
+            padding: 12px 0 12px 23px;
+
+          }
+
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        &.open {
+          background-color: #B9D5FD;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          width: 257px;
+          position: relative;
+          box-sizing: border-box;
+
+          img {
+            padding-right: 23px;
+          }
+
+          .filter-select-body {
+            display: flex;
+            flex-direction: column;
+
+            img {
+              padding-right: 0;
+            }
+          }
+        }
+
+        .filter-select-body {
+          position: absolute;
+          z-index: 4;
+          width: 257px;
+          background-color: #FFFFFF;
+          border: 2px solid #B9D5FD;
+          box-sizing: border-box;
+          display: none;
+
+          .filter-select-item {
+            padding-left: 23px;
+            padding-top: 17px;
+            padding-right: 23px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+
+            &:last-child {
+              padding-bottom: 17px;
+              border-top-left-radius: 5px;
+              border-bottom-left-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+
+
+    .articles-items {
+      display: grid;
+      grid-template-columns: repeat( 4, 294px);
+      grid-row-gap: 40px;
+      grid-column-gap: 24px;
+      margin: 40px 0;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .pagination-arrow {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .pagination-pages {
+        margin-left: 50px;
+        margin-right: 50px;
+        display: flex;
+        align-items: center;
+
+        .pagination-page {
+          font-family: 'Montserrat', sans-serif;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          width: 34px;
+          height: 46px;
+          margin-right: 20px;
+          cursor: pointer;
+          font-size: 20px;
+          font-weight: 400;
+          color: $dark-blue-color;
+
+          a {
+
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
