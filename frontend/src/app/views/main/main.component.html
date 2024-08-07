@@ -79,7 +79,7 @@
   </owl-carousel-o>
 </section>
 
-<section class="services">
+<section class="services" id="services">
   <div class="container">
     <div class="services-title">
       Услуги, которые мы предлагаем
@@ -129,7 +129,7 @@
           <img src="../../../assets/images/services/service-3.png" alt="service-3">
         </div>
         <div class="services-item-title">
-          Создание сайтов
+          Реклама
         </div>
         <div class="services-item-description">
           Без рекламы не может обойтись ни один бизнес или специалист. Обращаясь к нам, мы гарантируем быстрый прирост
@@ -168,7 +168,7 @@
   </div>
 </section>
 
-<section class="about-us">
+<section class="about-us" id="about-us">
   <div class="container">
     <div class="about-us-img">
       <img src="../../../assets/images/pages/about-us-img.png" alt="about-us-img">
@@ -253,7 +253,7 @@
 
         </div>
         <div class="articles-item-link">
-          <a>Читать дальше</a>
+          <a [routerLink]="'/articles/'+ bestArticle.url">Читать дальше</a>
         </div>
       </div>
     </div>
@@ -265,7 +265,7 @@
 </section>
 
 
-<section class="reviews">
+<section class="reviews" id="reviews">
   <div class="container">
     <img class="blue-arrow-prev " (click)="owlCarReviews.prev()" src="../../../assets/images/pages/blue-arrow-prev.png"
          alt="blue-arrow">
@@ -335,7 +335,7 @@
 </section>
 
 
-<section class="contacts">
+<section class="contacts" id="contacts">
   <div class="container">
     <div class="map">
       <iframe

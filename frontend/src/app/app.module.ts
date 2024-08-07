@@ -15,22 +15,23 @@ import {MatMenuModule} from "@angular/material/menu";
 import {MatButtonModule} from "@angular/material/button";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatDialogModule} from "@angular/material/dialog";
+import {SharedModule} from "./shared/shared.module";
 
- import {SharedModule} from "./shared/shared.module";
-import { BlogComponent } from './views/blog/blog.component';
+
 
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        FooterComponent,
-        HeaderComponent,
-        LayoutComponent,
-        MainComponent,
-        BlogComponent,
+  declarations: [
+    AppComponent,
+    FooterComponent,
+    HeaderComponent,
+    LayoutComponent,
+    MainComponent,
 
 
-    ],
+
+
+  ],
   imports: [
     BrowserModule,
     HttpClientModule,

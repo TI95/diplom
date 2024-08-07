@@ -5,7 +5,7 @@ import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {UserInfo} from "../../../../types/user-info";
 import {DefaultResponseType} from "../../../../types/default-response.type";
 import {MatSnackBar} from "@angular/material/snack-bar";
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 
 @Component({
@@ -15,16 +15,21 @@ import {Router} from "@angular/router";
 })
 export class HeaderComponent implements OnInit {
   isLogged: boolean = false;
-  user: UserInfo | null = null;
+  user!: UserInfo
+  activeFragment: string | null = null;
 
   constructor(private authService: AuthService,
               private http: HttpClient,
               private _snackBar:MatSnackBar,
-              private router:Router) {
+              private router:Router,
+              private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
     this.isLogged = this.authService.getIsLoggedIn();
+    this.route.fragment.subscribe(fragment => {
+      this.activeFragment = fragment;
+    });
 
 
     if (this.isLogged) {
@@ -40,10 +45,17 @@ export class HeaderComponent implements OnInit {
             if (errorResponse.error && errorResponse.error.message) {
               console.log(errorResponse.error.message);
             }
-
           }
         });
     }
+  }
+
+  setActiveFragment(fragment: string) {
+    this.activeFragment = fragment;
+  }
+
+  isActiveFragment(fragment: string): boolean {
+    return this.activeFragment === fragment;
   }
 
   logout() {

@@ -1,4 +1,4 @@
-export type Articles = {
+export type ArticlesType = {
   count?: number,
   pages?: number,
   items:

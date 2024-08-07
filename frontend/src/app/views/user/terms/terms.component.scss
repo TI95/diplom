@@ -1,0 +1,18 @@
+@import "../../../../assets/styles/variables";
+
+
+.user-terms {
+  padding: 120px 0;
+
+  .container {
+
+    .user-terms-text {
+      font-size: 14px;
+      line-height: 20px;
+      .user-term {
+        font-size: 16px;
+        color: $light-blue-color;
+      }
+    }
+  }
+}

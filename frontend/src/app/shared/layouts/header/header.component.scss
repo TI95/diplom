@@ -1,14 +1,13 @@
 @import "../../../../assets/styles/variables";
 
 .header {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 
   .container.login {
     width: 1440px;
     padding: 0;
-
   }
+
   .container {
     display: flex;
     align-items: center;
@@ -38,7 +37,12 @@
           a {
             text-decoration: none;
             cursor: pointer;
-            color: #071739;
+            color: $dark-blue-color;
+
+            &.active {
+              color: $light-blue-color;
+            }
+
           }
 
           &:last-child {
@@ -62,16 +66,13 @@
 
         .header-profile-action-img {
           margin-left: 52px;
-
         }
 
         a {
           margin-left: 8px;
-          color: #071739;
+          color: $dark-blue-color;
           text-decoration: none;
         }
-
-
       }
 
       .header-profile-action-is-logged {
@@ -80,10 +81,9 @@
 
         a {
           margin-left: 8px;
-          color: #071739;
+          color: $dark-blue-color;
           text-decoration: none;
           cursor: pointer;
-
         }
       }
     }

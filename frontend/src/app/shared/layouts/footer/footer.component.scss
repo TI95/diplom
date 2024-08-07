@@ -4,7 +4,6 @@
   background-color: #B9D5FD;
 
   .container {
-    font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
     font-size: 16px;
@@ -30,7 +29,7 @@
 
           a {
             text-decoration: none;
-            color: #071739;
+            color: $dark-blue-color;
           }
         }
       }
@@ -51,7 +50,7 @@
         }
 
         .footer-bottom-menu-item-text {
-          color: #071739;
+          color: $dark-blue-color;
           text-decoration: none;
         }
 

@@ -1,3 +1,4 @@
+@import "variables";
 
 .articles-item {
   position: relative;
@@ -12,9 +13,6 @@
     background-size: cover;
     background-position: center;
 
-    img {
-
-    }
 
     .article-item-category {
       position: absolute;
@@ -28,7 +26,6 @@
   }
 
   .articles-item-title {
-    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: 500;
     line-height: 26px;
@@ -36,20 +33,15 @@
     color: $light-blue-color;
   }
 
-
   .articles-item-description {
-    font-family: 'Montserrat', sans-serif;
     width: 287px;
     font-size: 14px;
     line-height: 18px;
-    color: #071739;
-
-
+    color: $dark-blue-color;
 
   }
 
   .articles-item-link {
-    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     cursor: pointer;
     color: $light-blue-color;
@@ -57,8 +49,10 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    a:visited {
+      color: $light-blue-color;
+    }
   }
-
 }
 
 

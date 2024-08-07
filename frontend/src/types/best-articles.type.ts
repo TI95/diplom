@@ -1,6 +1,4 @@
-export type BestArticles = {
-
-
+export type BestArticlesType = {
   id: string,
   title: string,
   description:string,
@@ -8,5 +6,4 @@ export type BestArticles = {
   date: string,
   category: string,
   url: string
-
 }

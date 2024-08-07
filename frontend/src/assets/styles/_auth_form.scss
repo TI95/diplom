@@ -4,10 +4,10 @@
 .auth {
   padding-top: 120px;
   padding-bottom: 120px;
+  height: 50vh; // добавил что бы страница логина была на весь экран, а то она по высоте не на весь экран была по макету
   .container {
     display: flex;
     justify-content: space-between;
-
 
 
     .auth-form {
@@ -17,7 +17,7 @@
         font-family: 'Lora', sans-serif;
         margin-bottom: 40px;
         font-weight: 400;
-        color:$light-blue-color;
+        color: $light-blue-color;
 
 
       }
@@ -43,25 +43,25 @@
           }
         }
 
-
-
         .auth-checkbox {
-
           margin-top: 10px;
           display: flex;
           align-items: baseline;
 
-          input{
+          input {
             margin-top: 4px;
             margin-right: 10px;
+            cursor: pointer;
           }
 
           label {
             width: 398px;
-            color: #071739;
+            color: $dark-blue-color;
 
             a {
               color: $light-blue-color;
+              text-decoration: underline;
+              cursor: pointer;
             }
           }
         }
@@ -84,8 +84,6 @@
           cursor: pointer;
         }
       }
-    }
-    .auth-img {
     }
   }
 }

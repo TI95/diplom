@@ -27,6 +27,9 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
 
   }
+  openInNewWindow(url: string) {
+    window.open(url, '_blank');
+  }
 
   signup(){
     if(this.signupForm.valid && this.signupForm.value.email  && this.signupForm.value.password

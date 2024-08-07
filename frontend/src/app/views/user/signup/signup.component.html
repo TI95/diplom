@@ -28,7 +28,7 @@
       </div>
       <div class="auth-checkbox">
         <input type="checkbox" id="remember"  class="checkbox" formControlName="agree">
-        <label for="remember">Я принимаю <a href="#">условия пользовательского соглашения</a> и даю <a href="#">согласие
+        <label for="remember">Я принимаю <a  (click)="openInNewWindow('/terms#user-terms')">условия пользовательского соглашения</a> и даю <a (click)="openInNewWindow('/terms#user-terms-use-data')">согласие
           на обработку персональных данных</a>. </label>
       </div>
       </div>

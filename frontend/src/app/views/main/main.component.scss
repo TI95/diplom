@@ -19,7 +19,6 @@
         padding-top: 100px;
         color: $light-blue-color;
         font-weight: 600;
-        font-family: 'Montserrat', sans-serif;
         letter-spacing: 0.4em;
       }
 
@@ -48,11 +47,6 @@
         margin-bottom: 50px;
         max-width: 456px;
       }
-
-      .carousel-button {
-
-      }
-
     }
 
     .move-back img, .move-forward img {
@@ -89,7 +83,6 @@
     }
 
     .services-items {
-      font-family: 'Montserrat', sans-serif;
       display: flex;
       justify-content: space-between;
 
@@ -354,7 +347,7 @@
         padding: 0 30px;
         font-size: 16px;
         line-height: 22.4px;
-        color: #071739;
+        color: $dark-blue-color;
       }
     }
   }
@@ -384,21 +377,17 @@
 
       .contact-address-title {
         color: $light-blue-color;
-
         font-size: 20px;
         font-weight: 500;
         margin-bottom: 10px;
-        font-family: 'Montserrat', sans-serif;
 
       }
 
       .contact-address {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
         font-size: 14px;
         line-height: 18.2px;
         margin-bottom: 20px;
-        color: #071739;
+        color: $dark-blue-color;
         width: 501px;
       }
 
@@ -417,7 +406,7 @@
 
         a {
           font-size: 14px;
-          color: #071739;
+          color: $dark-blue-color;
           text-decoration: none;
         }
       }
@@ -435,17 +424,14 @@
 
 
         a {
-          font-family: 'Montserrat', sans-serif;
           font-weight: 400;
           font-size: 14px;
           text-decoration: none;
-          color: #071739;
+          color: $dark-blue-color;
         }
       }
 
       .contact-socials-title {
-        font-family: 'Montserrat', sans-serif;
-
         color: $light-blue-color;
         font-size: 20px;
         font-weight: 500;
@@ -461,8 +447,6 @@
           margin-right: 0;
         }
       }
-
-
     }
   }
 }

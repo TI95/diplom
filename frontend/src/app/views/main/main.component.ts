@@ -1,7 +1,7 @@
 import {Component, ElementRef, HostListener, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {OwlOptions} from "ngx-owl-carousel-o";
 import {ArticlesService} from "../../shared/services/articles.service";
-import {BestArticles} from "../../../types/best-articles";
+import {BestArticlesType} from "../../../types/best-articles.type";
 import {environment} from "../../../environments/environment";
 import {MatDialog, MatDialogRef} from "@angular/material/dialog";
  import {FormBuilder, FormGroup, Validators} from "@angular/forms";
@@ -16,7 +16,7 @@ import {RequestService} from "../../shared/services/request.service";
 })
 
 export class MainComponent implements OnInit {
-  bestArticles: BestArticles[] = [];
+  bestArticles: BestArticlesType[] = [];
   serverStaticPath = environment.serverStaticPath;
 
   OwlOptions: any = {
@@ -78,12 +78,11 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
     this.articlesService.getBestArticles()
-      .subscribe((data: BestArticles[]) => {
+      .subscribe((data: BestArticlesType[]) => {
         this.bestArticles = data;
       });
 
   }
-
 
   openModal(value: string) {
     this.popupService.openModal(value);

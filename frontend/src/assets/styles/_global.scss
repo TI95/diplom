@@ -1,3 +1,5 @@
+@import "variables";
+
 html, body {
   margin: 0;
   padding: 0;
@@ -34,6 +36,24 @@ html, body {
     cursor: not-allowed;
   }
 }
+
+.multiline-truncate {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+}
+
+.description {
+  line-clamp: 6;
+  -webkit-line-clamp: 6;
+}
+
+.title {
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+}
+
 
 .owl-nav {
   display: none;
@@ -76,19 +96,33 @@ html, body {
 }
 
 
-/*.cdk-overlay-connected-position-bounding-box {
-  top: 80.5px !important;
-  left: 1787px !important;
-}*/
-
-
-
 
 .mat-button {
   padding: 15px 33px !important;
   line-height: inherit !important;
-  border-radius: 5px  !important;
+  border-radius: 5px !important;
 }
 
 
+i {
+  font-size: 14px;
+  line-height: 18.2px;
+  color: $dark-blue-color;
 
+
+}
+
+h1, h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: $light-blue-color;
+}
+
+p {
+  line-height: 18.2px;
+  color: $dark-blue-color;
+
+  b {
+    font-weight: 500;
+  }
+}

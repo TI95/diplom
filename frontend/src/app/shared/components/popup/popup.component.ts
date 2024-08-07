@@ -39,8 +39,10 @@ export class PopupComponent implements OnInit {
       }
       this.dialogRef = this.dialog.open(this.popup);
       this.popupForm.get('service')?.setValue(value);
-      this.dialogRef.backdropClick().subscribe(() => {
-        this.closePopup();
+      this.dialogRef.afterOpened().subscribe(() => {
+        this.dialogRef?.backdropClick().subscribe(() => {
+          this.closePopup();
+        });
       });
     });
   }
