@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ArticleType} from "../../../../types/article.type";
+import {ArticleWithCommentType} from "../../../../types/article-with-comment.type";
 import {environment} from "../../../../environments/environment";
 import {ArticlesService} from "../../../shared/services/articles.service";
 import {AuthService} from "../../../core/auth/auth.service";
@@ -11,8 +11,8 @@ import {CommentsService} from "../../../shared/services/comments.service";
 import {DefaultResponseType} from "../../../../types/default-response.type";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {GetCommentsType} from "../../../../types/get-comments.type";
-import {BestArticlesType} from "../../../../types/best-articles.type";
-import {UserActionsType} from "../../../../types/user-actions.type";
+import {ArticleType} from "../../../../types/article.type";
+import {UserActionType} from "../../../../types/user-action.type";
 import {LoaderService} from "../../../shared/services/loader.service";
 
 @Component({
@@ -21,7 +21,7 @@ import {LoaderService} from "../../../shared/services/loader.service";
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
-  detailedArticle!: ArticleType;
+  detailedArticle!: ArticleWithCommentType;
   serverStaticPath = environment.serverStaticPath;
   isLogged: boolean = false;
   safeHtmlContent!: SafeHtml;
@@ -29,10 +29,9 @@ export class DetailComponent implements OnInit {
   moreArticleComments!: GetCommentsType;
   offset: number = 3;
   articleHasComments = false;
-  relatedArticles: BestArticlesType[] = [];
-  userActions: UserActionsType = [];
-  userAction: UserActionsType = [];
-  isLoadingComments: boolean = false;
+  relatedArticles: ArticleType[] = [];
+  userActions: UserActionType[] = [];
+  userAction: UserActionType[] = [];
 
   form = this.fb.group({
     textValue: ['', [Validators.required]]
@@ -60,7 +59,7 @@ export class DetailComponent implements OnInit {
   getRelatedArticle() {
     this.activatedRoute.params.subscribe(params => {
       this.articlesService.getRelatedArticles(params['url'])
-        .subscribe((data: BestArticlesType[]) => {
+        .subscribe((data: ArticleType[]) => {
           this.relatedArticles = data;
         })
     });
@@ -69,7 +68,7 @@ export class DetailComponent implements OnInit {
   getDetailArticleData() {
     this.activatedRoute.params.subscribe(params => {
       this.articlesService.getArticleDetails(params['url'])
-        .subscribe((data: ArticleType) => {
+        .subscribe((data: ArticleWithCommentType) => {
           this.detailedArticle = data;
           this.safeHtmlContent = this.sanitizer.bypassSecurityTrustHtml(this.detailedArticle.text);
           this.detailedArticle.comments = this.formatCommentsDates(this.detailedArticle.comments);
@@ -92,7 +91,7 @@ export class DetailComponent implements OnInit {
     return `${day}.${month}.${year} ${hours}:${minutes}`;
   }
 
-  formatCommentsDates(comments: ArticleType['comments']): ArticleType['comments'] {
+  formatCommentsDates(comments: ArticleWithCommentType['comments']): ArticleWithCommentType['comments'] {
     return comments.map(comment => {
       if(!comment.isDateFormatted)
       comment.date = this.formatDate(comment.date);
@@ -173,11 +172,11 @@ export class DetailComponent implements OnInit {
 
   allUserReactions() {
     this.commentServices.getAllUserReactions(this.detailedArticle.id)
-      .subscribe((userActionsResponse: UserActionsType | DefaultResponseType) => {
+      .subscribe((userActionsResponse: UserActionType[] | DefaultResponseType) => {
         if ((userActionsResponse as DefaultResponseType).error !== undefined) {
           throw new Error((userActionsResponse as DefaultResponseType).message);
         }
-        this.userActions = userActionsResponse as UserActionsType;
+        this.userActions = userActionsResponse as UserActionType[];
         this.userActions.forEach(userAction => {
           const matchingComment = this.detailedArticle.comments.find(comment => comment.id === userAction.comment);
           if (matchingComment) {
@@ -194,11 +193,11 @@ export class DetailComponent implements OnInit {
 
   getUserReactions(commentId: string) {
     this.commentServices.getUserReactions(commentId)
-      .subscribe((response: UserActionsType | DefaultResponseType) => {
+      .subscribe((response: UserActionType[] | DefaultResponseType) => {
         if ((response as DefaultResponseType).error !== undefined) {
           throw new Error((response as DefaultResponseType).message);
         }
-        this.userAction = response as UserActionsType;
+        this.userAction = response as UserActionType[];
         if (this.userAction.length === 0) {
           const matchingComment = this.detailedArticle.comments.find(comment => comment.id === commentId);
           if (matchingComment) {

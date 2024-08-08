@@ -31,22 +31,7 @@
       </div>
     </div>
     <div class="articles-items">
-      <div class="articles-item" *ngFor=" let article of articles.items">
-        <div class="articles-item-image" style="background-image: url({{serverStaticPath + article.image}})">
-
-          <div class="article-item-category">{{article.category}}</div>
-        </div>
-        <div class="articles-item-title multiline-truncate title">
-          {{ article.title }}</div>
-        <div class="articles-item-description  multiline-truncate description ">
-          {{article.description}}
-
-        </div>
-        <div class="articles-item-link">
-          <a [routerLink]="'/articles/' + article.url" >Читать дальше</a>
-        </div>
-      </div>
-
+    <app-article-card *ngFor="let article of articles.items" [article]="article">  </app-article-card>
     </div>
     <div class="pagination">
       <div class="pagination-arrow" (click)="openPrevPage()"

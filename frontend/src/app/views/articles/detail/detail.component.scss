@@ -1,4 +1,3 @@
-@import "../../../../assets/styles/articles";
 @import "../../../../assets/styles/variables";
 
 .article {
@@ -78,13 +77,6 @@
           font-weight: 400;
           color: $light-blue-color;
           margin-bottom: 20px;
-        }
-        .articles-item {
-          margin-bottom: 60px;
-
-          &:last-child {
-            margin-bottom: 0;
-          }
         }
       }
     }
@@ -273,3 +265,10 @@
     }
   }
 }
+
+:host ::ng-deep .article-card {
+  margin-bottom: 60px;
+
+}
+
+

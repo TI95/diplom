@@ -4,7 +4,7 @@ import {environment} from "../../../environments/environment";
 import {Observable} from "rxjs";
 import {DefaultResponseType} from "../../../types/default-response.type";
 import {GetCommentsType} from "../../../types/get-comments.type";
-import {UserActionsType} from "../../../types/user-actions.type";
+import {UserActionType} from "../../../types/user-action.type";
 
 
 @Injectable({
@@ -38,13 +38,13 @@ export class CommentsService {
     });
   }
 
-  getAllUserReactions(articleId: string): Observable<UserActionsType | DefaultResponseType> {
+  getAllUserReactions(articleId: string): Observable<UserActionType[] | DefaultResponseType> {
     let params = new HttpParams().set('articleId', articleId);
-    return this.http.get<UserActionsType | DefaultResponseType>(environment.api + 'comments/article-comment-actions', {params});
+    return this.http.get<UserActionType[] | DefaultResponseType>(environment.api + 'comments/article-comment-actions', {params});
   }
 
-  getUserReactions(id:string ):Observable<UserActionsType | DefaultResponseType>{
-     return this.http.get<UserActionsType | DefaultResponseType>(environment.api + 'comments/' + id + '/actions');
+  getUserReactions(id:string ):Observable<UserActionType[] | DefaultResponseType>{
+     return this.http.get<UserActionType[] | DefaultResponseType>(environment.api + 'comments/' + id + '/actions');
 
   }
 

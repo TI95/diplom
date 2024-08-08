@@ -9,22 +9,28 @@
         <input type="text" class="name"
                [ngStyle]="{'border-color': signupForm.get('name')?.invalid
                  && (signupForm.get('name')?.dirty || signupForm.get('name')?.touched)? 'red' : ''}"
-               placeholder="Электронная почта" formControlName="name">
-
-
+               placeholder="Имя" formControlName="name">
+        <div   *ngIf="signupForm.get('name')?.invalid && (signupForm.get('name')?.dirty || signupForm.get('name')?.touched)" class="error-message">
+          Введите Имя.
+        </div>
       </div>
       <div class="auth-input">
         <input type="text" class="email"
                [ngStyle]="{'border-color': signupForm.get('email')?.invalid
                  && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)? 'red' : ''}"
                placeholder="Электронная почта" formControlName="email">
-
+        <div *ngIf="signupForm.get('email')?.invalid && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)" class="error-message">
+          Введите корректную Электронную почту.
+        </div>
       </div>
       <div class="auth-input">
         <input type="password" class="password"
                [ngStyle]="{'border-color': signupForm.get('password')?.invalid
                  && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)? 'red' : ''}"
                placeholder="Пароль" formControlName="password">
+        <div   *ngIf="signupForm.get('password')?.invalid && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)" class="error-message">
+          Придумайте пароль, которые содержит не менее 8 символов,как минимум 1 букву в верхнем регистре и минимум 1 цифра
+        </div>
       </div>
       <div class="auth-checkbox">
         <input type="checkbox" id="remember"  class="checkbox" formControlName="agree">

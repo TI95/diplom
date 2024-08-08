@@ -1,10 +1,8 @@
-import {Component, ElementRef, OnInit, TemplateRef, ViewChild} from '@angular/core';
+import {Component, ElementRef, Inject, inject, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
-import {MatDialog, MatDialogRef} from "@angular/material/dialog";
 import {RequestService} from "../../services/request.service";
 import {DefaultResponseType} from "../../../../types/default-response.type";
-import {PopupService} from "../../services/popup.service";
-import {of} from "rxjs";
+import {DIALOG_DATA, DialogRef} from "@angular/cdk/dialog";
 
 @Component({
   selector: 'app-popup',
@@ -12,12 +10,11 @@ import {of} from "rxjs";
   styleUrls: ['./popup.component.scss']
 })
 export class PopupComponent implements OnInit {
-  dialogRef: MatDialogRef<any> | null = null;
   options: string[] = ['Фриланс', 'Продвижение', 'Реклама', 'Копирайтинг'];
   orderCompleteResponseError = false;
   showOrderCompletedText = false;
   @ViewChild('popup') popup!: TemplateRef<ElementRef>
-   footerPopup = false;
+  footerPopup = false;
 
   popupForm = this.fb.group({
     service: [''],
@@ -25,31 +22,23 @@ export class PopupComponent implements OnInit {
     phone: ['', [Validators.required]]
   })
 
-  constructor(private dialog: MatDialog,
-              private fb: FormBuilder,
-              private requestService: RequestService,
-              private popupService: PopupService) {
+  constructor(
+    @Inject(DIALOG_DATA) private data: string,
+    private fb: FormBuilder,
+    private requestService: RequestService,
+    private dialogRef:DialogRef
+   ) {
   }
 
   ngOnInit(): void {
-
-    this.popupService.open$.subscribe((value:string) => {
-      if(value === ''){
-        this.footerPopup = true;
-      }
-      this.dialogRef = this.dialog.open(this.popup);
-      this.popupForm.get('service')?.setValue(value);
-      this.dialogRef.afterOpened().subscribe(() => {
-        this.dialogRef?.backdropClick().subscribe(() => {
-          this.closePopup();
-        });
-      });
-    });
+    if (!this.data) {
+      this.footerPopup = true;
+    }
+    this.popupForm.get('service')?.setValue(this.data);
   }
 
 
-
-  completeOrder(type:string) {
+  completeOrder(type: string) {
     if (this.popupForm.invalid) {
       this.popupForm.markAllAsTouched();
       return;
@@ -64,7 +53,7 @@ export class PopupComponent implements OnInit {
     if (this.popupForm.value.service) {
       orderData.service = this.popupForm.value.service;
     }
-    if (this.popupForm.valid && this.popupForm.value.name && this.popupForm.value.phone ) {
+    if (this.popupForm.valid && this.popupForm.value.name && this.popupForm.value.phone) {
       this.requestService.makeOrder(this.popupForm.value.name, this.popupForm.value.phone, type, this.popupForm.value.service!)
         .subscribe({
             next: (response: DefaultResponseType) => {
@@ -84,12 +73,6 @@ export class PopupComponent implements OnInit {
   }
 
   closePopup() {
-    this.dialogRef!.close();
-    this.showOrderCompletedText = false;
-    this.popupForm.markAsPristine();
-    this.footerPopup = false;
-    this.popupForm.reset();
-
-
+    this.dialogRef.close();
   }
 }

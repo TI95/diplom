@@ -11,6 +11,9 @@
                  [ngStyle]="{'border-color': loginForm.get('email')?.invalid
                  && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)? 'red' : ''}"
                  placeholder="Электронная почта" formControlName="email">
+          <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)" class="error-message">
+            Введите корректную Электронную почту.
+          </div>
         </div>
         <div class="auth-input">
           <input type="password" class="password"
@@ -18,6 +21,9 @@
                  [ngStyle]="{'border-color': loginForm.get('password')?.invalid
                  && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)? 'red' : ''}"
                  placeholder="Пароль" formControlName="password">
+          <div   *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)" class="error-message">
+            Введите пароль.
+          </div>
         </div>
 
         <div class="auth-checkbox">

@@ -14,21 +14,7 @@
       <div class="article-text" [innerHTML]="safeHtmlContent"></div>
       <div class="articles-items">
         <div class="article-items-title">Читайте также:</div>
-        <div class="articles-item" *ngFor=" let relatedArticle of relatedArticles">
-          <div class="articles-item-image" style="background-image: url({{serverStaticPath + relatedArticle.image}})">
-
-            <div class="article-item-category">{{relatedArticle.category}}</div>
-          </div>
-          <div class="articles-item-title multiline-truncate title">
-            {{ relatedArticle.title }}</div>
-          <div class="articles-item-description  multiline-truncate description ">
-            {{relatedArticle.description}}
-
-          </div>
-          <div class="articles-item-link">
-            <a [routerLink]="'/articles/' + relatedArticle.url">Читать дальше</a>
-          </div>
-        </div>
+       <app-article-card *ngFor="let article of relatedArticles " [article]="article"></app-article-card>
       </div>
     </div>
 

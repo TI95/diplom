@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../../../core/auth/auth.service";
 import {HttpClient, HttpErrorResponse} from "@angular/common/http";
-
-import {UserInfo} from "../../../../types/user-info";
+import {UserInfoType} from "../../../../types/user-info.type";
 import {DefaultResponseType} from "../../../../types/default-response.type";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {ActivatedRoute, Router} from "@angular/router";
@@ -15,7 +14,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class HeaderComponent implements OnInit {
   isLogged: boolean = false;
-  user!: UserInfo
+  user!: UserInfoType
   activeFragment: string | null = null;
 
   constructor(private authService: AuthService,
@@ -35,9 +34,9 @@ export class HeaderComponent implements OnInit {
     if (this.isLogged) {
       this.authService.getUserInfo()
         .subscribe({
-          next: (response: UserInfo | DefaultResponseType) => {
+          next: (response: UserInfoType | DefaultResponseType) => {
             if ('id' in response) {
-              this.user = response as UserInfo;
+              this.user = response as UserInfoType;
             }
           },
 

@@ -1,9 +1,18 @@
-@import "variables";
+@import "../../../../assets/styles/variables";
 
-.articles-item {
-  position: relative;
+.article-card {
+  display: flex;
+  flex-direction: column;
   width: 292px;
-  height: 571px;
+  justify-content: space-between;
+  height: 100%;
+  :host {
+    margin-bottom: 60px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   .articles-item-image {
     margin-bottom: 15px;
@@ -38,18 +47,15 @@
     font-size: 14px;
     line-height: 18px;
     color: $dark-blue-color;
-
+    margin-bottom: 20px;
   }
 
   .articles-item-link {
     font-size: 16px;
-    cursor: pointer;
     color: $light-blue-color;
     text-decoration: underline;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    a:visited {
+
+    articles-item-link:visited {
       color: $light-blue-color;
     }
   }

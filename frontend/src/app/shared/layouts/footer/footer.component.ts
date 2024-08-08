@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {PopupService} from "../../services/popup.service";
+import {PopupComponent} from "../../components/popup/popup.component";
+import {Dialog} from "@angular/cdk/dialog";
 
 @Component({
   selector: 'app-footer',
@@ -8,16 +9,14 @@ import {PopupService} from "../../services/popup.service";
 })
 export class FooterComponent implements OnInit {
 
-  constructor(private popupService: PopupService) { }
+  constructor( private dialog: Dialog,) { }
 
   ngOnInit(): void {
   }
 
 
   openModal(value: string) {
-
-    this.popupService.openModal(value);
-
+    this.dialog.open(PopupComponent, {data:value})
   }
 
 }

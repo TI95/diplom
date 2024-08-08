@@ -1,12 +1,10 @@
-import {Component, ElementRef, HostListener, OnInit, TemplateRef, ViewChild} from '@angular/core';
-import {OwlOptions} from "ngx-owl-carousel-o";
+import {Component, OnInit} from '@angular/core';
+
 import {ArticlesService} from "../../shared/services/articles.service";
-import {BestArticlesType} from "../../../types/best-articles.type";
-import {environment} from "../../../environments/environment";
-import {MatDialog, MatDialogRef} from "@angular/material/dialog";
- import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {RequestService} from "../../shared/services/request.service";
- import {PopupService} from "../../shared/services/popup.service";
+import {ArticleType} from "../../../types/article.type";
+
+import {Dialog} from "@angular/cdk/dialog";
+import {PopupComponent} from "../../shared/components/popup/popup.component";
 
 
 @Component({
@@ -16,8 +14,8 @@ import {RequestService} from "../../shared/services/request.service";
 })
 
 export class MainComponent implements OnInit {
-  bestArticles: BestArticlesType[] = [];
-  serverStaticPath = environment.serverStaticPath;
+  bestArticles: ArticleType[] = [];
+
 
   OwlOptions: any = {
     loop: true,
@@ -70,21 +68,20 @@ export class MainComponent implements OnInit {
   }
 
   constructor(private articlesService: ArticlesService,
-              private dialog: MatDialog,
-              private fb: FormBuilder,
-              private requestService: RequestService,
-              private popupService: PopupService) {}
+              private dialog: Dialog,
+  ) {
+  }
 
 
   ngOnInit(): void {
     this.articlesService.getBestArticles()
-      .subscribe((data: BestArticlesType[]) => {
+      .subscribe((data: ArticleType[]) => {
         this.bestArticles = data;
       });
 
   }
 
   openModal(value: string) {
-    this.popupService.openModal(value);
+    this.dialog.open(PopupComponent, {data: value})
   }
 }

@@ -15,9 +15,7 @@
             <button class="btn" mat-button (click)="openModal('Реклама')">Подробнее</button>
           </div>
         </div>
-        <div class="banner-image">
-          <img src="../../../assets/images/banner/banner-img-1.png" alt="banner-img-1">
-        </div>
+        <img class="banner-img" src="../../../assets/images/banner/banner-img-1.png" alt="banner-img-1">
         <a class="move-forward" (click)="owlCar.next()"><img src="../../../assets/images/pages/arrow-next.png"
                                                              alt="arrow-next"></a>
       </div>
@@ -41,9 +39,7 @@
             <button class="btn" mat-button (click)="openModal('Копирайтинг')">Подробнее</button>
           </div>
         </div>
-        <div class="banner-image">
-        </div>
-        <img src="../../../assets/images/banner/banner-img-2.png" alt="banner-img-3">
+        <img class="banner-img" src="../../../assets/images/banner/banner-img-2.png" alt="banner-img-3">
         <a class="move-forward" (click)="owlCar.next()"><img src="../../../assets/images/pages/arrow-next.png"
                                                              alt="arrow-next"></a>
       </div>
@@ -69,9 +65,8 @@
             <button class="btn" mat-button (click)="openModal('Продвижение')">Подробнее</button>
           </div>
         </div>
-        <div class="banner-image">
-          <img src="../../../assets/images/banner/banner-img-3.png" alt="banner-img-3">
-        </div>
+
+        <img class="banner-img" src="../../../assets/images/banner/banner-img-3.png" alt="banner-img-3">
         <a class="move-forward" (click)="owlCar.next()"><img src="../../../assets/images/pages/arrow-next.png"
                                                              alt="arrow-next"></a>
       </div>
@@ -241,25 +236,11 @@
       Популярные статьи из блога
     </div>
     <div class="articles-items">
-      <div class="articles-item" *ngFor=" let bestArticle of bestArticles">
-        <div class="articles-item-image" style="background-image: url({{serverStaticPath + bestArticle.image}})">
-
-          <div class="article-item-category">{{bestArticle.category}}</div>
-        </div>
-        <div class="articles-item-title">
-          {{bestArticle.title}}      </div>
-        <div class="articles-item-description">
-          {{bestArticle.description}}
-
-        </div>
-        <div class="articles-item-link">
-          <a [routerLink]="'/articles/'+ bestArticle.url">Читать дальше</a>
-        </div>
-      </div>
+      <app-article-card *ngFor="let bestArticle of bestArticles" [article]="bestArticle"></app-article-card>
     </div>
     <div class="articles-items-blog-link">
-      <a routerLink="articles">Перейти в блог</a>
-      <img class="link-arrow" src="../../../assets/images/pages/link-arrow.png" alt="link-arrow">
+      <a routerLink="articles">Перейти в блог<img class="link-arrow"
+                                                  src="../../../../assets/images/pages/link-arrow.png" alt="link-arrow"></a>
     </div>
   </div>
 </section>
@@ -379,7 +360,5 @@
   </div>
 </section>
 
-
-<app-popup></app-popup>
 
 

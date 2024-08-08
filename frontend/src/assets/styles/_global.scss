@@ -12,9 +12,8 @@ html, body {
 
 .container {
   width: 1240px;
-  //margin: 0 560px;
   margin: 0 auto;
-  padding: 0 100px;
+
 }
 
 
@@ -36,6 +35,34 @@ html, body {
     cursor: not-allowed;
   }
 }
+
+input {
+  width: 422px;
+  box-sizing: border-box;
+  border: 2px solid $light-blue-color;
+  padding: 17px 20px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 5px;
+}
+
+input[type="checkbox"] {
+  width: 14px;
+}
+
+label {
+  font-size: 14px;
+  color: #A8ABA7;
+
+}
+
+.error-message {
+  color: red;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  margin-bottom: 5px;
+  width: 422px;
+}
+
 
 .multiline-truncate {
   display: -webkit-box;
@@ -82,19 +109,19 @@ html, body {
 
 
 .owl-carousel {
-  position: relative;
 
-  .owl-item img {
+
+
+ .owl-item .banner-img {
     width: 750px;
-    height: 500px;
-    position: absolute;
-    z-index: -1;
-    //left: 45%;
-    right: 650px;
-    top: 0;
-  }
+   height: 500px;
+   position: absolute;
+   z-index: -1;
+   right: 50%;
+   top: 0;
+    left: 40%;
+ }
 }
-
 
 
 .mat-button {
@@ -126,3 +153,4 @@ p {
     font-weight: 500;
   }
 }
+

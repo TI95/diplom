@@ -15,7 +15,6 @@ import {debounceTime} from "rxjs/operators";
 })
 export class BlogComponent implements OnInit {
   articles!: ArticlesType;
-  serverStaticPath = environment.serverStaticPath;
   pages: number[] = [];
   activeParams: ActiveParamsType = {categories: []};
   appliedFilters: AppliedFilterType[] = [];

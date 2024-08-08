@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {BestArticlesType} from "../../../types/best-articles.type";
+import {ArticleType} from "../../../types/article.type";
 import {Observable} from "rxjs";
 import {environment} from "../../../environments/environment";
 import {ArticlesType} from "../../../types/articles.type";
 import {ActiveParamsType} from "../../../types/active-params.type";
-import {ArticleType} from "../../../types/article.type";
+import {ArticleWithCommentType} from "../../../types/article-with-comment.type";
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +14,8 @@ export class ArticlesService {
 
   constructor(private http:HttpClient) { }
 
-  getBestArticles():Observable<BestArticlesType[]>{
-    return this.http.get<BestArticlesType[]>(environment.api + 'articles/top');
+  getBestArticles():Observable<ArticleType[]>{
+    return this.http.get<ArticleType[]>(environment.api + 'articles/top');
   }
 
   getAllArticles(params?:ActiveParamsType):Observable< ArticlesType>{
@@ -24,11 +24,11 @@ export class ArticlesService {
     });
   }
 
-  getArticleDetails(url:string):Observable<ArticleType>{
-    return this.http.get<ArticleType>(environment.api + 'articles/' + url);
+  getArticleDetails(url:string):Observable<ArticleWithCommentType>{
+    return this.http.get<ArticleWithCommentType>(environment.api + 'articles/' + url);
   }
 
-  getRelatedArticles(url:string):Observable<BestArticlesType[]>{
-    return this.http.get<BestArticlesType[]>(environment.api + 'articles/related/' + url);
+  getRelatedArticles(url:string):Observable<ArticleType[]>{
+    return this.http.get<ArticleType[]>(environment.api + 'articles/related/' + url);
   }
 }

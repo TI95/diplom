@@ -9,7 +9,6 @@
     display: flex;
     justify-content: space-between;
 
-
     .auth-form {
 
       .auth-title {
@@ -19,40 +18,15 @@
         font-weight: 400;
         color: $light-blue-color;
 
-
       }
 
       .auth-inputs {
         margin-bottom: 40px;
 
-        .auth-input {
-          margin-bottom: 5px;
-
-
-          input {
-            width: 422px;
-            box-sizing: border-box;
-            border: 2px solid $light-blue-color;
-            padding: 17px 20px;
-
-          }
-
-          label {
-            font-size: 14px;
-            color: #A8ABA7;
-          }
-        }
-
         .auth-checkbox {
           margin-top: 10px;
           display: flex;
           align-items: baseline;
-
-          input {
-            margin-top: 4px;
-            margin-right: 10px;
-            cursor: pointer;
-          }
 
           label {
             width: 398px;

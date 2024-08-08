@@ -1,18 +1,19 @@
 @import "../../../assets/styles/variables";
-@import "../../../assets/styles/articles";
 
 .banner {
   padding-bottom: 120px;
 
   .container {
-
+    position: relative;
 
     .carousel-background {
       background-color: #B9D5FD;
       clip-path: ellipse(557px 131% at 12% -2%);
       padding-left: 60px;
-      position: relative;
       height: 500px;
+      width: 1240px;
+
+
 
       .carousel-title {
         font-size: 12px;
@@ -54,20 +55,21 @@
       height: 28px;
       position: absolute;
       z-index: 99;
-      top: 40%;
+      top: 50%;
+      transform: translateY(-50%);
       cursor: pointer;
     }
 
     .move-back img {
-      left: 670px;
-
+      transform: translate(-50%, -50%);
+      left: 2%;
     }
 
     .move-forward img {
-      right: 670px;
+      transform: translate(50%, -50%); // Центрирование по обеим осям
+      right: 2%;
     }
   }
-
 }
 
 .services {

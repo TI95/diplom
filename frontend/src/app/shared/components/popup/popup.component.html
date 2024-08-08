@@ -1,10 +1,9 @@
-<ng-template #popup>
-  <div class="modal" (click)="closePopup()">
-    <div class="modal-body " (click)="$event.stopPropagation()">
+<div class="modal" >
+    <div class="modal-body">
       <div class="modal-body-order" *ngIf="!showOrderCompletedText">
         <div class="modal-title">Заявка на услугу</div>
         <form [formGroup]="popupForm"  class="modal-inputs">
-          <select class="modal-input" *ngIf="!footerPopup" formControlName="service">
+          <select class="modal-select" *ngIf="!footerPopup" formControlName="service">
 
             <option *ngFor="let option of options" [value]="option">{{ option }}</option>
           </select>
@@ -12,11 +11,17 @@
                  [ngStyle]="{'border-color': popupForm.get('name')?.invalid
                  && (popupForm.get('name')?.dirty || popupForm.get('name')?.touched)? 'red' : ''}"
                  formControlName="name" placeholder="Ваше имя">
+          <div   *ngIf="popupForm.get('name')?.invalid && (popupForm.get('name')?.dirty || popupForm.get('name')?.touched)" class="error-message">
+            Введите ваше имя.
+          </div>
 
           <input type="text" class="modal-input"
                  [ngStyle]="{'border-color': popupForm.get('phone')?.invalid
                  && (popupForm.get('phone')?.dirty || popupForm.get('phone')?.touched)? 'red' : ''}"
                  formControlName="phone" placeholder="Ваш номер телефона">
+          <div   *ngIf="popupForm.get('phone')?.invalid && (popupForm.get('phone')?.dirty || popupForm.get('phone')?.touched)" class="error-message">
+            Введите ваш номер телефона.
+          </div>
         </form>
         <div class="modal-action">
           <button class="btn" *ngIf=" !footerPopup" (click)="completeOrder('order')" >Оставить заявку</button>
@@ -35,5 +40,5 @@
         </div>
       </div >
     </div>
-  </div>
-</ng-template>
+</div>
+

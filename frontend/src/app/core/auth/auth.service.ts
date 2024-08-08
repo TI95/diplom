@@ -5,7 +5,7 @@ import {LoginResponseType} from "../../../types/login-response.type";
 import {environment} from "../../../environments/environment";
 import {DefaultResponseType} from "../../../types/default-response.type";
 import {HttpClient} from "@angular/common/http";
-import {UserInfo} from "../../../types/user-info";
+import {UserInfoType} from "../../../types/user-info.type";
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class AuthService {
   public accessTokenKey: string = 'accessToken'
   public refreshTokenKey: string = 'refreshToken'
   public userIdKey: string = 'userId'
-  public userInfo:UserInfo|null = null;
+  public userInfo:UserInfoType|null = null;
 
 
   public isLogged$: Subject<boolean> = new Subject<boolean>();
@@ -101,8 +101,8 @@ export class AuthService {
     return this.isLogged;
   }
 
-  getUserInfo(): Observable<UserInfo | DefaultResponseType> {
-    return this.http.get<UserInfo | DefaultResponseType>(`${environment.api}users`);
+  getUserInfo(): Observable<UserInfoType | DefaultResponseType> {
+    return this.http.get<UserInfoType | DefaultResponseType>(`${environment.api}users`);
   }
 }
 
