@@ -6,6 +6,10 @@
 /out-tsc
 /bazel-out
 .vscode
+../diplom.rar
+../diplomWithFixes.rar
+../diplomWithFixesV2.rar
+../.idea
 
 # Node
 /node_modules
