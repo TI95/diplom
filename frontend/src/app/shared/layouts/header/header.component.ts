@@ -5,6 +5,7 @@ import {UserInfoType} from "../../../../types/user-info.type";
 import {DefaultResponseType} from "../../../../types/default-response.type";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {ActivatedRoute, Router} from "@angular/router";
+import {concatMap, EMPTY, of} from "rxjs";
 
 
 @Component({
@@ -25,28 +26,33 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.isLogged = this.authService.getIsLoggedIn();
-    this.route.fragment.subscribe(fragment => {
+    this.authService.isLogged$.pipe(
+      concatMap(isLogged => {
+        if(isLogged){
+          this.isLogged = isLogged;
+          return this.authService.getUserInfo()
+        }
+        return EMPTY;
+      })
+    ).subscribe({
+      next: (response: UserInfoType | DefaultResponseType) => {
+        if (response && 'id' in response) {
+          this.user = response as UserInfoType;
+        }
+      },
+
+      error: (errorResponse: HttpErrorResponse) => {
+        if (errorResponse.error && errorResponse.error.message) {
+          console.log(errorResponse.error.message);
+        }
+      }
+    })
+
+
+     this.route.fragment.subscribe(fragment => {
       this.activeFragment = fragment;
     });
 
-
-    if (this.isLogged) {
-      this.authService.getUserInfo()
-        .subscribe({
-          next: (response: UserInfoType | DefaultResponseType) => {
-            if ('id' in response) {
-              this.user = response as UserInfoType;
-            }
-          },
-
-          error: (errorResponse: HttpErrorResponse) => {
-            if (errorResponse.error && errorResponse.error.message) {
-              console.log(errorResponse.error.message);
-            }
-          }
-        });
-    }
   }
 
   setActiveFragment(fragment: string) {

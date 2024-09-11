@@ -4,7 +4,7 @@
 .auth {
   padding-top: 120px;
   padding-bottom: 120px;
-  height: 50vh; // добавил что бы страница логина была на весь экран, а то она по высоте не на весь экран была по макету
+  height: 600px;
   .container {
     display: flex;
     justify-content: space-between;
@@ -17,7 +17,6 @@
         margin-bottom: 40px;
         font-weight: 400;
         color: $light-blue-color;
-
       }
 
       .auth-inputs {
@@ -46,8 +45,6 @@
 
         button {
           width: 422px;
-          padding: 15px 0;
-          font-size: 16px;
         }
       }
 

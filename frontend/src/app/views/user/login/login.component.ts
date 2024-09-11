@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
             this.authService.userId = loginResponse.userId;
             this._snackbar.open('Вы успешно авторизовались');
             this.router.navigate(['/'])
-            this.refreshPage();
+
 
 
           },
@@ -66,12 +66,6 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  refreshPage(): void {
-    this.router.navigate(['/'])
-      .then(() => {
-        window.location.reload();
-      });
-  }
 }
 
 
