@@ -2,12 +2,14 @@
 
 
 .auth {
-  padding-top: 120px;
-  padding-bottom: 120px;
-  height: 600px;
+
+
+
   .container {
     display: flex;
     justify-content: space-between;
+    padding: 120px 20px 120px 20px;
+    height: 55vh;
 
     .auth-form {
 

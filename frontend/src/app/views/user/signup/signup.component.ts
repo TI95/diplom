@@ -14,9 +14,9 @@ import {Router} from "@angular/router";
 })
 export class SignupComponent implements OnInit {
   signupForm = this.fb.group({
-    name: ['', [Validators.required, Validators.pattern(/^([А-ЯЁ][а-яё]*)( [А-ЯЁ][а-яё]*)*$/) ]],
+    name: ['', [Validators.required, Validators.pattern(/^([А-ЯЁA-Z][а-яёa-z]*)?( [А-ЯЁA-Z][а-яёa-z]*)*$/) ]],
     email: ['', [Validators.email, Validators.required]],
-    password: ['', [Validators.required, Validators.pattern(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/) ]],
+    password: ['', [Validators.required, Validators.pattern(/^(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,}$/) ]],
     agree: [false, [Validators.requiredTrue]],
   })
   constructor(private fb:FormBuilder,

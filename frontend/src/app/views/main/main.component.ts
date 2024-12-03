@@ -10,7 +10,7 @@ import {PopupComponent} from "../../shared/components/popup/popup.component";
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  styleUrls: ['./main.component.scss', './main-adaptive.component.scss']
 })
 
 export class MainComponent implements OnInit {
@@ -18,6 +18,7 @@ export class MainComponent implements OnInit {
 
 
   OwlOptions: any = {
+   
     loop: true,
     mouseDrag: true,
     touchDrag: true,
@@ -47,23 +48,23 @@ export class MainComponent implements OnInit {
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
-    dots: true,
+    dots: false,
     navSpeed: 900,
     navText: ['', ''],
-    responsive: {
-      0: {
-        items: 3
+    responsive:{
+      0:{
+          items:1,
+       
       },
-      400: {
-        items: 3
+      600:{
+          items:2,
+         
       },
-      740: {
-        items: 3
-      },
-      940: {
-        items: 3
+      1200:{
+          items:3,
+       
       }
-    },
+  },
     nav: true
   }
 

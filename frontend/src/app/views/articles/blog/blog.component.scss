@@ -1,13 +1,11 @@
 @import "../../../../assets/styles/variables";
 
-
 .blog {
   .container {
-
     .blog-title {
       padding-top: 80px;
       color: $light-blue-color;
-      font-family: 'Lora', sans-serif;
+      font-family: "Lora", sans-serif;
       font-size: 38px;
       font-weight: 400;
       margin-bottom: 40px;
@@ -16,7 +14,6 @@
     .filters {
       display: flex;
       justify-content: space-between;
-
 
       .filter-selected {
         display: flex;
@@ -46,7 +43,6 @@
           img {
             width: 16px;
             height: 16px;
-
           }
         }
       }
@@ -66,9 +62,7 @@
             font-size: 16px;
             margin-right: 8px;
             padding: 12px 0 12px 23px;
-
           }
-
 
           img {
             width: 20px;
@@ -77,7 +71,7 @@
         }
 
         &.open {
-          background-color: #B9D5FD;
+          background-color: #b9d5fd;
           border-top-left-radius: 5px;
           border-top-right-radius: 5px;
           width: 257px;
@@ -102,8 +96,8 @@
           position: absolute;
           z-index: 4;
           width: 257px;
-          background-color: #FFFFFF;
-          border: 2px solid #B9D5FD;
+          background-color: #ffffff;
+          border: 2px solid #b9d5fd;
           box-sizing: border-box;
           display: none;
 
@@ -117,7 +111,7 @@
             align-items: center;
             justify-content: space-between;
             cursor: pointer;
-            color: #BEBEBE;
+            color: #bebebe;
 
             &.active {
               color: $dark-blue-color;
@@ -131,7 +125,7 @@
 
             .plus {
               font-size: 24px;
-              color: #BEBEBE;
+              color: #bebebe;
             }
 
             .minus {
@@ -145,7 +139,7 @@
 
     .articles-items {
       display: grid;
-      grid-template-columns: repeat( 4, 294px);
+      grid-template-columns: repeat(4, 291px);
       grid-row-gap: 40px;
       grid-column-gap: 24px;
       margin: 40px 0;
@@ -189,6 +183,260 @@
           &:last-child {
             margin-right: 0;
           }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1390px) {
+  .blog {
+    .container {
+
+      .articles-items {
+        grid-template-columns: repeat(2, 291px);
+        grid-column-gap: 200px;
+        justify-content: center;
+        
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 960px) {
+  .blog {
+    .container {
+
+      .articles-items {
+        grid-column-gap: 100px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  .blog {
+    .container {
+
+     
+    }
+  }
+}
+
+
+@media only screen and (max-width: 890px) {
+  .blog {
+    .container {
+
+      .filters {
+        
+  
+        .filter-selected {
+          display:grid;
+          grid-template-columns: repeat(2, 150px);
+          grid-gap: 20px;
+        
+  
+          .filter-selected-title {
+           margin:0;
+           justify-content: space-between;
+  
+            span {
+              font-size: 14px;
+              
+            }
+          }
+  
+          a {
+        
+            img {
+              width: 14px;
+              height: 14px;
+            }
+          }
+        }
+  
+        .filter-select {
+          position: relative;
+          width: 148px;
+          cursor: pointer;
+  
+          .filter-select-head {
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            align-items: center;
+  
+            .filter-title {
+              font-size: 16px;
+              margin-right: 8px;
+              padding: 12px 0 12px 23px;
+            }
+  
+            img {
+              width: 20px;
+              height: 20px;
+            }
+          }
+  
+          &.open {
+        
+            width: 200px;
+          
+            img {
+            }
+  
+            .filter-select-body {
+              
+  
+              img {
+                
+              }
+            }
+          }
+  
+          .filter-select-body {
+            
+            width: 200px;
+      
+  
+            .filter-select-item {
+             
+              font-size: 14px;
+          
+  
+              &.active {
+                color: $dark-blue-color;
+              }
+  
+              &:last-child {
+             
+              }
+  
+              .plus {
+                font-size: 18px;
+                color: #bebebe;
+              }
+  
+              .minus {
+                font-size: 18px;
+            
+              }
+            }
+          }
+        }
+      }
+
+     
+
+      .articles-items {
+        grid-column-gap: 50px;
+        grid-template-columns: repeat(1, 291px);
+        
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 608px) {
+  .blog {
+    .container {
+
+      .filters {
+        flex-direction: column;
+        align-items: center;
+
+  
+        .filter-selected {
+          margin-bottom: 20px;
+       
+
+        
+  
+          .filter-selected-title {
+            
+  
+            span {
+              font-size: 12px;
+              
+            }
+          }
+  
+          a {
+        
+            img {
+             
+            }
+          }
+        }
+  
+        .filter-select {
+        
+  
+          
+  
+        
+  
+          .filter-select-body {
+           
+  
+            .filter-select-item {
+             
+  
+          
+  
+              .plus {
+              
+              }
+  
+              .minus {
+               
+              }
+            }
+          }
+        }
+      }
+
+     
+
+      .articles-items {
+        grid-column-gap: 50px;
+        grid-template-columns: repeat(1, 291px);
+        
+      }
+
+      .pagination{
+
+        .pagination-pages{
+
+          .pagination-page {
+            font-size:16px;
+           
+          }
+
+        }
+      }
+      
+    }
+  }
+}
+
+
+@media only screen and (max-width: 608px) {
+  .blog {
+    .container {
+
+      .filters {
+        flex-direction: column;
+        align-items: center;
+
+  
+        .filter-selected {
+          margin-bottom: 20px;
+          grid-template-columns: repeat(1, 160px);
+
         }
       }
     }

@@ -1,0 +1,57 @@
+@media only screen and (max-width: 1339px) {
+  .header {
+    .container.login {
+      padding: 0 20px;
+    }
+    .container {
+      justify-content: space-between;
+
+      .header-logo {
+        margin: 0;
+      }
+
+      .header-menu {
+        nav {
+          ul {
+            li {
+              &:last-child {
+                margin-right: 120px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 956px) {
+  .header {
+    .container {
+
+        .header-menu{
+            font-size: 14px;
+
+        }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 540px) {
+  .header {
+    .container {
+
+      .header-logo {
+        img {
+          width: 60px
+        }
+      }
+
+        .header-menu{
+            font-size: 14px;
+
+        }
+    }
+  }
+}

@@ -18,7 +18,7 @@ import {LoaderService} from "../../../shared/services/loader.service";
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.scss']
+  styleUrls: ['./detail.component.scss', './detail-adaptive.component.scss']
 })
 export class DetailComponent implements OnInit {
   detailedArticle!: ArticleWithCommentType;

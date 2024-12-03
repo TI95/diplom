@@ -4,8 +4,8 @@
   font-weight: 500;
 
   .container.login {
-    width: 1440px;
-    padding: 0;
+    max-width: 1440px;
+    margin-bottom:60px
   }
 
   .container {
@@ -87,5 +87,9 @@
         }
       }
     }
+
+   
   }
 }
+
+ 

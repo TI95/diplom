@@ -1,0 +1,572 @@
+@media only screen and (max-width: 1339px) {
+  .services {
+    .container {
+      .services-items {
+        display: grid;
+        grid-template-columns: repeat(2, 280px);
+        grid-row-gap: 60px;
+        justify-content: space-evenly;
+
+        .services-item {
+          .services-item-image {
+            img {
+              width: 280px;
+            }
+          }
+
+          .services-item-info {
+            .services-item-price {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .reviews {
+    .container {
+      .blue-arrow-next {
+        right: 5.5%;
+
+        z-index: 10;
+      }
+
+      .reviews-item {
+        width: 375px;
+      }
+    }
+  }
+
+  .about-us {
+    .container {
+      flex-direction: column-reverse;
+
+      .about-us-img {
+        display: flex;
+        justify-content: center;
+      }
+
+      .about-us-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .about-us-description {
+          max-width: 700px;
+        }
+
+        .about-us-advantages-title {
+          margin-bottom: 50px;
+        }
+
+        .about-us-advantages {
+          margin-bottom: 40px;
+        }
+      }
+
+      .about-us-img {
+        margin: 0;
+      }
+    }
+  }
+
+  .articles {
+    .container {
+      .articles-items {
+        display: grid;
+        grid-template-columns: repeat(2, 280px);
+        grid-row-gap: 60px;
+        justify-content: space-evenly;
+      }
+    }
+  }
+
+  .contacts {
+    .container {
+      flex-direction: column-reverse;
+
+      .contact {
+        margin-bottom: 40px;
+      }
+
+      .map {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1260px) {
+  .banner {
+    .container {
+      .carousel-background {
+        clip-path: ellipse(519px 131% at 12% -2%);
+
+        height: 450px;
+
+        .carousel-text {
+          width: 430px;
+          font-size: 30px;
+          line-height: 65px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1238px) {
+  .reviews {
+    .container {
+      .blue-arrow-next {
+        right: 1%;
+      }
+
+      .blue-arrow-prev {
+        left: 1%;
+      }
+
+      .reviews-item {
+        width: auto;
+        margin-right: 10px;
+        margin-left: 10px;
+        height: 320px;
+
+        .review-item-text {
+          width: auto;
+          
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .banner {
+    .container {
+      .carousel-background {
+        background-color: #b9d5fd;
+        clip-path: ellipse(380px 131% at 12% -2%);
+        height: 380px;
+      }
+      .move-back img {
+        left: 4.8%;
+      }
+
+      .move-forward img {
+        right: 4.8%;
+      }
+    }
+  }
+  .reviews {
+    .container {
+      .reviews-item {
+        .review-item-text {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .banner {
+    .container {
+      .carousel-background {
+        background-color: #b9d5fd;
+        clip-path: ellipse(400px 131% at 12% -2%);
+        width: 400px;
+
+        .carousel-text {
+          width: 365px;
+          line-height: 40px;
+          margin-top: 20px;
+          font-size: 26px;
+        }
+
+        .carousel-description {
+          font-size: 16px;
+          line-height: 26px;
+          color: #ffffff;
+          margin-bottom: 30px;
+          max-width: 250px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .banner {
+    .container {
+      .carousel-background {
+        background-color: #b9d5fd;
+        clip-path: ellipse(380px 131% at 12% -2%);
+      }
+      .move-back img {
+        display: none;
+      }
+
+      .move-forward img {
+        display: none;
+      }
+    }
+  }
+ 
+}
+
+@media only screen and (max-width: 750px) {
+  .banner {
+    .container {
+      .carousel-background {
+        clip-path: ellipse(350px 131% at 12% -2%);
+        height: 350px;
+        padding-left: 20px;
+
+        .carousel-title {
+          padding-top: 20px;
+        }
+
+        .carousel-text {
+          width: 300px;
+        }
+      }
+    }
+  }
+ 
+}
+
+@media only screen and (max-width: 668px) {
+  .banner {
+    .container {
+      .carousel-background {
+        clip-path: ellipse(70% 131% at 12% -2%);
+        height: 300px;
+
+       
+
+        .carousel-text {
+          width: 300px;
+        }
+
+        .carousel-description {
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  .about-us {
+    margin-bottom: 120px;
+
+    .container {
+      align-items: center;
+
+      .about-us-img {
+        width: 310px;
+
+        img {
+          width: 310px;
+        }
+      }
+      .about-us-info {
+        .about-us-advantages {
+          grid-template-columns: repeat(1, 316px);
+          grid-row-gap: 20px;
+        }
+      }
+    }
+  }
+
+  .services {
+    .container {
+      .services-items {
+        grid-template-columns: repeat(1, 291px);
+        grid-row-gap: 60px;
+
+        .services-item {
+          .services-item-info {
+            justify-content: space-between;
+
+            .services-item-price {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .articles {
+    .container {
+      .articles-items {
+        grid-template-columns: repeat(1, 291px);
+        grid-row-gap: 60px;
+      }
+    }
+  }
+
+  .contacts {
+    .container {
+      .contact {
+        .contact-address {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .reviews {
+    .container {
+      .reviews-item {
+        height: auto;
+        .review-item-text {
+          padding-bottom: 20px;
+          font-size: 14px;
+
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 588px) {
+  .banner {
+    .container {
+      .carousel-background {
+        clip-path: ellipse(62% 131% at 12% -2%);
+        height: 300px;
+
+      
+
+        .carousel-text {
+          width: 270px;
+        }
+
+        .carousel-description {
+          line-height: 15px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .banner {
+    .container {
+      .carousel-background {
+        clip-path: ellipse(52% 131% at 12% -2%);
+        height: 250px;
+
+       
+
+        .carousel-text {
+          font-size: 14px;
+          width: 180px;
+          line-height: 20px;
+        }
+
+        .carousel-description {
+          font-size: 12px;
+          width: 180px;
+        }
+      }
+    }
+  }
+
+  .services {
+    .container {
+      .services-title {
+        font-size: 30px;
+      }
+
+      .services-items {
+        .services-item {
+          .services-item-title {
+            font-size: 18px;
+          }
+
+          .services-item-description {
+            font-size: 12px;
+            height: 60px;
+          }
+
+          .services-item-info {
+            .services-item-price {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .about-us {
+    .container {
+      .about-us-info {
+        .about-us-title {
+          font-size: 30px;
+        }
+
+        .about-us-description {
+          font-size: 12px;
+        }
+
+        .about-us-advantages-title {
+          font-size: 20px;
+        }
+
+        .about-us-advantages {
+          .about-us-advantage {
+            .about-us-advantage-description {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .articles {
+    .container {
+      .articles-title {
+        font-size: 30px;
+      }
+
+      .articles-items-blog-link {
+        a {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .reviews {
+    .container {
+      .reviews-title {
+          font-size: 30px;
+      }
+      }
+    }
+ 
+
+  .contacts {
+    .container {
+      .contact {
+        .contact-title {
+          font-size: 30px;
+        }
+
+        .contact-address-title {
+          font-size: 18px;
+        }
+
+        .contact-address {
+          font-size: 12px;
+        }
+
+        .contact-phone-title {
+          font-size: 18px;
+        }
+
+        .contact-phone {
+          font-size: 12px;
+        }
+
+        .contact-email-title {
+          font-size: 18px;
+        }
+
+        .contact-email {
+          font-size: 12px;
+        }
+
+        .contact-socials-title {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .banner {
+    .container {
+      .carousel-background {
+        clip-path: ellipse(42% 131% at 12% -2%);
+        height: 200px;
+
+        .carousel-title {
+          letter-spacing: 0.1em;
+        }
+
+        .carousel-text {
+          font-size: 14px;
+          width: 180px;
+          line-height: 20px;
+          margin-top: 10px;
+        }
+
+        .v2 {
+          margin-bottom: 10px;
+        }
+
+        .carousel-description {
+          font-size: 12px;
+          width: 180px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 368px) {
+  .services {
+    .container {
+      .services-items {
+        grid-template-columns: repeat(1, 280px);
+        grid-row-gap: 60px;
+      }
+    }
+  }
+
+  .about-us {
+    margin-bottom: 120px;
+
+    .container {
+      .about-us-img {
+        img {
+          width: 280px;
+        }
+      }
+      .about-us-info {
+        .about-us-advantages {
+          grid-template-columns: repeat(1, 280px);
+          grid-row-gap: 20px;
+
+          .about-us-advantage {
+            width: 100%;
+
+            .about-us-advantage-number-background {
+              margin-right: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .articles {
+    .container {
+      .articles-items {
+        grid-template-columns: repeat(1, 280px);
+        grid-row-gap: 40px;
+      }
+    }
+  }
+}

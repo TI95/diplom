@@ -1,19 +1,18 @@
 @import "../../../assets/styles/variables";
 
 .banner {
-  padding-bottom: 120px;
+  
+  margin-bottom:120px;
 
   .container {
     position: relative;
 
     .carousel-background {
-      background-color: #B9D5FD;
+      background-color: #b9d5fd;
       clip-path: ellipse(557px 131% at 12% -2%);
       padding-left: 60px;
       height: 500px;
-      width: 1240px;
-
-
+      max-width: 100%;
 
       .carousel-title {
         font-size: 12px;
@@ -24,13 +23,13 @@
       }
 
       .carousel-text {
-        font-family: 'Lora', sans-serif;
+        font-family: "Lora", sans-serif;
         font-size: 50px;
         line-height: 65px;
         font-weight: 400;
         margin-bottom: 40px;
         width: 610px;
-        color: #FFFFFF;
+        color: #ffffff;
 
         span {
           color: $light-blue-color;
@@ -44,13 +43,14 @@
       .carousel-description {
         font-size: 24px;
         line-height: 31.2px;
-        color: #FFFFFF;
+        color: #ffffff;
         margin-bottom: 50px;
         max-width: 456px;
       }
     }
 
-    .move-back img, .move-forward img {
+    .move-back img,
+    .move-forward img {
       width: 15px;
       height: 28px;
       position: absolute;
@@ -62,24 +62,23 @@
 
     .move-back img {
       transform: translate(-50%, -50%);
-      left: 2%;
+      left: 3.8%;
     }
 
     .move-forward img {
-      transform: translate(50%, -50%); // Центрирование по обеим осям
-      right: 2%;
+      transform: translate(50%, -50%);  
+      right: 3.8%;
     }
   }
 }
 
 .services {
-  padding-bottom: 120px;
+  margin-bottom:120px;
 
   .container {
-
     .services-title {
       font-size: 38px;
-      font-family: 'Lora', sans-serif;
+      font-family: "Lora", sans-serif;
       margin-bottom: 40px;
       color: $light-blue-color;
     }
@@ -89,7 +88,6 @@
       justify-content: space-between;
 
       .services-item {
-
         .services-item-image {
           margin-bottom: 15px;
         }
@@ -125,52 +123,47 @@
 }
 
 .about-us {
-  padding-bottom: 120px;
+  margin-bottom:120px;
 
   .container {
     display: flex;
 
     .about-us-img {
       margin-right: 68px;
-
     }
 
     .about-us-info {
-
       .about-us-title {
-        font-family: 'Lora', sans-serif;
+        font-family: "Lora", sans-serif;
         font-size: 38px;
         color: $light-blue-color;
         margin-bottom: 20px;
         font-weight: 500;
-
       }
 
       .about-us-description {
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-size: 14px;
         font-weight: 500;
         line-height: 18.2px;
-        color: #1E1A2B;
+        color: #1e1a2b;
         margin-bottom: 40px;
 
         span {
           font-weight: 400;
-
         }
       }
 
       .about-us-advantages-title {
-        font-family: 'Lora', sans-serif;
+        font-family: "Lora", sans-serif;
         font-size: 26px;
         color: $light-blue-color;
         margin-bottom: 20px;
-
       }
 
       .about-us-advantages {
         display: grid;
-        grid-template-columns: repeat( 2, 316px);
+        grid-template-columns: repeat(2, 316px);
         grid-row-gap: 20px;
 
         .about-us-advantage {
@@ -182,7 +175,7 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: #B9D5FD;
+            background-color: #b9d5fd;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -193,25 +186,22 @@
               font-size: 50px;
               color: $light-blue-color;
               margin-bottom: 10px;
-              font-family: ' Lora', sans-serif;
+              font-family: " Lora", sans-serif;
               font-weight: 500;
               position: absolute;
               top: -17px;
-
             }
           }
 
           .about-us-advantage-description {
-
             font-size: 14px;
             font-weight: 500;
             line-height: 18.2px;
-            color: #1E1A2B;
+            color: #1e1a2b;
             width: 256px;
 
             span {
               font-weight: 400;
-
             }
           }
         }
@@ -221,12 +211,11 @@
 }
 
 .articles {
-  padding-bottom: 120px;
+  margin-bottom:120px;
 
   .container {
-
     .articles-title {
-      font-family: 'Lora', sans-serif;
+      font-family: "Lora", sans-serif;
       font-size: 38px;
       font-weight: 400;
       margin-bottom: 40px;
@@ -237,39 +226,39 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 40px;
-
-
     }
 
     .articles-items-blog-link {
       display: flex;
-      align-items: center;
       justify-content: flex-end;
 
       a {
-        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        align-items: center;
+        font-family: "Montserrat", sans-serif;
         font-weight: 500;
         color: $light-blue-color;
         font-size: 20px;
-        margin-right: 14px;
         text-decoration: none;
       }
 
       .link-arrow {
         height: 16px;
         width: 16px;
+        margin-left: 10px;
       }
     }
   }
 }
 
 .reviews {
-  padding-bottom: 120px;
+  margin-bottom:120px;
 
   .container {
     position: relative;
 
-    .blue-arrow-next, .blue-arrow-prev {
+    .blue-arrow-next,
+    .blue-arrow-prev {
       position: absolute;
       width: 10px;
       height: 19px;
@@ -278,35 +267,34 @@
     }
 
     .blue-arrow-prev {
-
-      left: 1%;
+      left: 2.5%;
+   
       z-index: 10;
     }
 
     .blue-arrow-next {
-      right: 2%;
+      right: 3.5%;
+  
       z-index: 10;
     }
 
     .reviews-title {
-      font-family: 'Lora', sans-serif;
+      font-family: "Lora", sans-serif;
       font-size: 38px;
       font-weight: 400;
       color: $light-blue-color;
       margin-bottom: 20px;
-
     }
 
     .reviews-item {
       width: 396px;
       height: 267px;
-      border: 2px solid #709FDC;
+      border: 2px solid #709fdc;
       border-radius: 5px;
       display: flex;
       flex-direction: column;
 
       .review-item-top {
-
         padding-left: 30px;
         padding-top: 30px;
         margin-bottom: 15px;
@@ -325,7 +313,9 @@
           background-image: url("../../../assets/images/reviews/review-3.png");
         }
 
-        .review-item-img-1, .review-item-img-2, .review-item-img-3 {
+        .review-item-img-1,
+        .review-item-img-2,
+        .review-item-img-3 {
           width: 60px;
           height: 60px;
           margin-right: 26px;
@@ -335,16 +325,15 @@
         }
 
         .review-item-name {
-          font-family: 'Montserrat', sans-serif;
+          font-family: "Montserrat", sans-serif;
           font-size: 18px;
           font-weight: 600;
           color: $light-blue-color;
-
         }
       }
 
       .review-item-text {
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         width: 336px;
         padding: 0 30px;
         font-size: 16px;
@@ -356,7 +345,7 @@
 }
 
 .contacts {
-  padding-bottom: 120px;
+  margin-bottom:120px;
 
   .container {
     display: flex;
@@ -371,7 +360,7 @@
 
       .contact-title {
         color: $light-blue-color;
-        font-family: 'Lora', sans-serif;
+        font-family: "Lora", sans-serif;
         font-size: 38px;
         font-weight: 400;
         margin-bottom: 20px;
@@ -382,7 +371,6 @@
         font-size: 20px;
         font-weight: 500;
         margin-bottom: 10px;
-
       }
 
       .contact-address {
@@ -394,7 +382,7 @@
       }
 
       .contact-phone-title {
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         color: $light-blue-color;
         font-size: 20px;
         font-weight: 500;
@@ -403,7 +391,7 @@
 
       .contact-phone {
         margin-bottom: 20px;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-weight: 400;
 
         a {
@@ -414,7 +402,7 @@
       }
 
       .contact-email-title {
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         color: $light-blue-color;
         font-size: 20px;
         font-weight: 500;
@@ -423,7 +411,6 @@
 
       .contact-email {
         margin-bottom: 20px;
-
 
         a {
           font-weight: 400;
@@ -453,5 +440,5 @@
   }
 }
 
-
-
+ 
+ 

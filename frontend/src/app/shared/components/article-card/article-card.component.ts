@@ -5,7 +5,7 @@ import {environment} from "../../../../environments/environment";
 @Component({
   selector: 'app-article-card',
   templateUrl: './article-card.component.html',
-  styleUrls: ['./article-card.component.scss']
+  styleUrls: ['./article-card.component.scss', './article-card-adaptive.components.scss']
 })
 export class ArticleCardComponent implements OnInit {
 

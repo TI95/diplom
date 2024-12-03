@@ -1,0 +1,152 @@
+@media only screen and (max-width: 1124px) {
+  .auth {
+    .container {
+      align-items: center;
+
+      .auth-img {
+        width: 440px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 976px) {
+  .auth {
+    .container {
+      flex-direction: column-reverse;
+      padding: 40px 20px;
+
+      .auth-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        auth-title {
+        }
+
+        .auth-inputs {
+        
+
+          .auth-input {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+          }
+
+          .auth-checkbox{
+            width: 270px;
+
+            label {
+                width: 270px;
+            }
+          }
+        }
+
+
+        .auth-button {
+            .btn {
+                width: 280px;
+            }
+        }
+      }
+    }
+  }
+}
+
+ 
+
+@media only screen and (max-width: 540px) {
+    .auth {
+        .container {
+          flex-direction: column-reverse;
+     
+    
+
+          .auth-img {
+            width: 320px;
+          
+          }
+          .auth-form {
+            
+            .auth-title {
+                font-size: 24px;
+            }
+    
+            .auth-inputs {
+            
+    
+              .auth-input {
+                display: flex;
+                justify-content: center;
+              }
+    
+              .auth-checkbox{
+                width: 230px;
+                
+             
+
+                label {
+                    width: 230px;
+                    font-size:12px;
+                }
+              }
+            }
+    
+    
+            .auth-button {
+                .btn {
+                    width: 230px;
+                }
+
+
+            }
+
+            
+            .auth-link{
+                font-size:12px
+            }
+          }
+        }
+      }
+}
+
+
+@media only screen and (max-width: 540px) {
+    .auth {
+        .container {
+      
+     
+    
+
+          .auth-img {
+            width: 280px;
+          
+          }
+
+          .auth-form {
+            .auth-title{
+                font-size: 22px;
+            }
+
+            .auth-inputs {
+                .auth-checkbox{
+                    width: 230px;
+                    align-items: center;
+                    
+                    input[type=checkbox] {
+                        width: 12px;
+                        margin-right: 5px;
+                    }
+    
+                    label {
+                         font-size:10px;
+                    }
+                  }
+            }
+          }
+
+          
+        }
+    }
+}

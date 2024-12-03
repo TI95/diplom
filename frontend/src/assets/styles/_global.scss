@@ -1,24 +1,22 @@
 @import "variables";
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 14px;
-
-
 }
 
 .container {
-  width: 1240px;
+  max-width: 1240px;
   margin: 0 auto;
-
+  padding: 0 20px;
 }
 
-
 .btn {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 16px;
   padding: 15px 33px;
   background-color: $light-blue-color;
@@ -26,9 +24,8 @@ html, body {
   box-sizing: border-box;
   border: 0;
   cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
-
 
   &:disabled {
     background: gray;
@@ -41,7 +38,7 @@ input {
   box-sizing: border-box;
   border: 2px solid $light-blue-color;
   padding: 17px 20px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 5px;
 }
 
@@ -51,24 +48,21 @@ input[type="checkbox"] {
 
 label {
   font-size: 14px;
-  color: #A8ABA7;
-
+  color: #a8aba7;
 }
 
 .error-message {
   color: red;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   margin-bottom: 5px;
   width: 422px;
 }
 
-
 .multiline-truncate {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
-
 }
 
 .description {
@@ -81,6 +75,12 @@ label {
   -webkit-line-clamp: 4;
 }
 
+.mat-menu-item {
+  a {
+    text-decoration: none;
+    color: #071739;
+  }
+}
 
 .owl-nav {
   display: none;
@@ -90,16 +90,18 @@ label {
   position: absolute;
   bottom: 0;
   left: 50%;
+  transform: translate(-50%, -50%);
 
   .owl-dot span {
     background: transparent;
-    border: 1px solid #FFFFFF;
-
+    border: 1px solid #ffffff;
   }
 }
 
 
-.owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span, owl-dot.active span {
+.owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span,
+owl-dot.active span {
   background: white;
 }
 
@@ -107,22 +109,17 @@ label {
   background: white;
 }
 
-
 .owl-carousel {
-
-
-
- .owl-item .banner-img {
-    width: 750px;
-   height: 500px;
-   position: absolute;
-   z-index: -1;
-   right: 50%;
-   top: 0;
+  .owl-item .banner-img {
+    max-width: 750px;
+    height: 500px;
+    position: absolute;
+    z-index: -1;
+    right: 50%;
+    top: 0;
     left: 40%;
- }
+  }
 }
-
 
 .mat-button {
   padding: 15px 33px !important;
@@ -130,16 +127,14 @@ label {
   border-radius: 5px !important;
 }
 
-
 i {
   font-size: 14px;
   line-height: 18.2px;
   color: $dark-blue-color;
-
-
 }
 
-h1, h3 {
+h1,
+h3 {
   font-size: 20px;
   font-weight: 500;
   color: $light-blue-color;
@@ -154,3 +149,162 @@ p {
   }
 }
 
+@media only screen and (max-width: 1339px) {
+  .container {
+    padding: 0 20px;
+
+  
+  }
+
+ 
+}
+@media only screen and (max-width: 1280px) {
+  .owl-carousel {
+    .owl-item .banner-img {
+     
+      left: 39.2%;
+    }
+  }
+}
+
+
+
+
+@media only screen and (max-width: 1260px) {
+  .owl-carousel {
+    .owl-item {
+      .banner-img {
+       
+        height: 450px;
+          width: 59%;
+  
+       
+      }
+    }
+  
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .owl-carousel {
+    .owl-item .banner-img {
+      height:380px;
+      left: 38.6%;
+    }
+  }
+}
+
+@media only screen and (max-width: 922px) {
+  input {
+    max-width: 280px;
+  }
+
+  .error-message {
+    width: 280px;
+  }
+}
+
+ 
+
+@media only screen and (max-width: 785px) {
+  h1,
+  h3 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .owl-carousel {
+    .owl-item {
+      .banner-img {
+       
+        height: 350px;
+      }
+    }
+  
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .owl-carousel {
+    .owl-item {
+      .banner-img {
+       
+        height: 300px;
+        width: 58%;
+      }
+    }
+  
+  }
+    .owl-theme .owl-dots .owl-dot span {
+    width: 7px;
+    height: 7px;
+  
+}
+
+.owl-theme .owl-dots {
+   bottom: -10px
+}
+}
+ 
+
+
+@media only screen and (max-width: 588px) {
+  .mat-button {
+    padding: 10px 15px !important;
+    line-height: inherit !important;
+    border-radius: 5px !important;
+    
+}
+
+.owl-carousel {
+  .owl-item {
+    .banner-img {
+     
+      height: 300px;
+      width: 56%;
+    }
+  }
+
+}
+}
+
+@media only screen and (max-width: 540px) {
+  .btn {
+    font-size: 12px;
+  }
+
+  input {
+    max-width: 230px;
+  }
+
+  .error-message {
+    font-size: 10px;
+    width: 230px;
+  }
+
+ 
+    .owl-carousel {
+      .owl-item {
+        .banner-img {
+         
+          height: 250px;
+        
+        }
+      }
+    
+ 
+  }
+}
+
+@media only screen and (max-width:440px) {
+  .owl-carousel {
+    .owl-item {
+      .banner-img {
+       
+        height: 200px;
+    
+      }
+    }
+  }
+}

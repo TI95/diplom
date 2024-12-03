@@ -1,0 +1,237 @@
+@media screen and (max-width: 1186px) {
+  .article {
+    .container {
+      .article-top {
+        .article-top-left {
+          .class-article-description {
+            font-size: 18px;
+            max-width: 380px;
+          }
+        }
+
+        .article-top-right {
+          .article-image {
+            width: 350px;
+          }
+        }
+      }
+
+      .article-comments {
+        form {
+          .article-textarea {
+            width: 700px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 918px) {
+  .article {
+    .container {
+      .article-top {
+        flex-direction: column;
+        align-items: center;
+
+        .article-top-left {
+          margin-bottom: 20px;
+
+          .class-article-description {
+            font-size: 18px;
+            max-width: 100%;
+          }
+        }
+
+        .article-top-right {
+          .article-image {
+            width: 450px;
+          }
+        }
+      }
+
+      .article-body {
+        .article-text {
+          margin-right: 50px;
+          width: 100%;
+        }
+      }
+
+      .article-comments {
+        form {
+          .article-textarea {
+            width: 700px;
+          }
+        }
+
+        .user-comments {
+          .user-comment-body {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 785px) {
+  .article {
+    .container {
+      .article-breadcrumbs {
+        font-size: 12px;
+        padding-top:40px;
+      }
+
+      .article-top {
+        .article-top-left {
+          max-width: 100%;
+
+          .article-title {
+            font-size: 30px;
+          }
+
+          .class-article-description {
+            font-size: 16px;
+            margin-bottom: 20px;
+          }
+        }
+
+        .article-top-right {
+          .article-image {
+            width: 350px;
+          }
+        }
+      }
+
+      .article-body {
+        flex-direction: column;
+
+        .article-text {
+          margin-right: 0;
+          font-size: 12px;
+        }
+      }
+
+      .article-socials {
+        flex-direction: column;
+        align-items: center;
+
+        .article-socials-text {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+      }
+
+      .article-comments {
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          .article-textarea {
+            width: 450px;
+            height: 220px;
+          }
+
+          .article-socials {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: none;
+          }
+
+          .article-form-action {
+            .btn {
+              width: 310px;
+              font-size: 14px;
+            }
+          }
+        }
+
+        .user-comments {
+          .user-comment-body {
+            .user-comment-top {
+              .user-comment-data {
+                .user-comment-name {
+                  font-size: 16px;
+                }
+              }
+            }
+
+            .user-comment-bottom {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 528px) {
+    .article {
+        .container {
+         
+            .article-top {
+            
+                
+        
+                .article-top-right {
+                  .article-image {
+                    width: 280px;
+                  }
+                }
+              }
+    
+          .article-socials {
+            
+    
+            .article-socials-text {
+              font-size:12px
+            }
+          }
+    
+          .article-comments {
+
+            .article-comments-title {
+                    font-size: 30px;
+            }
+            form {
+               
+              .article-textarea {
+                width: 270px;
+                height: 135px;
+              }
+    
+              .article-socials {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: none;
+              }
+    
+              .article-form-action {
+                .btn {
+                  width: 260px;
+                  font-size: 12px;
+                }
+              }
+            }
+    
+            .user-comments {
+              .user-comment-body {
+                .user-comment-top {
+                  .user-comment-data {
+                    .user-comment-name {
+                      font-size: 16px;
+                    }
+                  }
+                }
+    
+                .user-comment-bottom {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+}

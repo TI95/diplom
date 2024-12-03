@@ -7,7 +7,7 @@ import {DIALOG_DATA, DialogRef} from "@angular/cdk/dialog";
 @Component({
   selector: 'app-popup',
   templateUrl: './popup.component.html',
-  styleUrls: ['./popup.component.scss']
+  styleUrls: ['./popup.component.scss', './popup-adaptive.component.scss']
 })
 export class PopupComponent implements OnInit {
   options: string[] = ['Фриланс', 'Продвижение', 'Реклама', 'Копирайтинг'];
