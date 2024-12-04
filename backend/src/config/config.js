@@ -3,10 +3,12 @@ const config = {
     env: process.env.ENV,
     port: 3000,
     db: {
-        dbUrl: 'mongodb://127.0.0.1:27017',
+       /* dbUrl: 'mongodb://127.0.0.1:27017',
         dbName: 'diploma',
         dbHost: 'localhost',
-        dbPort: 27017,
+        dbPort: 27017,  */
+        dbUrl: 'mongodb+srv://tilvess95:oCwZ7QFZySpyUEW1@diplom.bgd2y.mongodb.net/?retryWrites=true&w=majority&appName=Diplom',
+        dbName: 'diplom',
     },
     userCommentActions: {
         like: 'like',

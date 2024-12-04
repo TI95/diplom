@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7476fb7c-461a-4362-a200-a1c0bad2ce48" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/backend/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/project.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/migrations/20221128150925-addUser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/migrations/20221128195517-addCategories.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/migrations/20230119094021-addArticles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/.idea/project.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/migrate-mongo-config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/migrations/20221128150925-addUser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/migrations/20221128195517-addCategories.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/migrations/20230119094021-addArticles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/config/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/controllers/article.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/controllers/auth.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/controllers/category.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/controllers/comment.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/controllers/request.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/controllers/user.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/models/article.model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/models/category.model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/models/comment.model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/models/request.model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/models/user-comment-action.model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/models/user.model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/normalizers/article.normalizer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/normalizers/base.normalizer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/normalizers/category.normalizer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/normalizers/comment.normalizer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/normalizers/user-comment-action.normalizer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/normalizers/user.normalizer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/routes/article.routes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/routes/auth.routes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/routes/category.routes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/routes/comment.routes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/routes/request.routes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/routes/user.routes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/utils/common/auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/utils/common/connection.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/utils/token.utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/project/src/utils/validation.utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/config/config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2pluPzAp2AbjiHI47B15RagtTEP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "E:\\WebstormProjects\\diplom\\frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7476fb7c-461a-4362-a200-a1c0bad2ce48" name="Changes" comment="" />
+      <created>1733352964527</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733352964527</updated>
+      <workItem from="1733352965966" duration="621000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
