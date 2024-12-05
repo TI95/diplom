@@ -7,8 +7,8 @@ const config = {
         dbName: 'diploma',
         dbHost: 'localhost',
         dbPort: 27017,  */
-        dbUrl: 'mongodb+srv://tilvess95:oCwZ7QFZySpyUEW1@diplom.bgd2y.mongodb.net/?retryWrites=true&w=majority&appName=Diplom',
-        dbName: 'diplom',
+        dbUrl: 'mongodb+srv://users:8fxBDG3!@diplom.bgd2y.mongodb.net/?retryWrites=true&w=majority&appName=Diplom',
+        dbName: 'api',
     },
     userCommentActions: {
         like: 'like',
@@ -22,3 +22,5 @@ const config = {
 };
 
 module.exports = config;
+
+ 
